@@ -87,7 +87,7 @@
                         </a>
                       </div>
                       <div class="container" >
-                        <a href="#" class="btn btn-danger" role="button" id="assignbtn">See More</a>
+                        <a href="assignemnts.php" class="btn btn-danger" role="button" id="assignbtn">See More</a>
                       </div>
 
                 </div>
