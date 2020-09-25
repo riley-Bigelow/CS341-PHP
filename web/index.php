@@ -128,7 +128,7 @@
                 </div>
             </div>
             <hr>
-            <div class="container-fluid" id="footer">
+            <div class="container-fluid" id="contact">
                 <h2 class="label">Contact Me</h2>
                 <div class="container" >
                     <div class="w3-large w3-margin-bottom">
