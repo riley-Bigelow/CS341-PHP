@@ -6,15 +6,10 @@ Your email address is: <?php echo $_GET["email"];?><br>
 You major is: <?php echo $_GET["major"];?><br>
 Comments: <?php echo $_GET["comments"];?> <br>
 <?php
-
-if(empty($_GET['continents'])){
-    echo "You live in the Ocean";
-}else{
-    $N = count($_GET['continents']);
-    echo("You have visited $N Continent(s): ");
-    for($i=0; $i < $N; $i++){
-        echo($_GET['continents'][$i] . " ");
-    }
+if(!empty($_GET['continents'])){
+    // Loop to store and display values of individual checked checkbox.
+    foreach($_GET['continents'] as $selected){
+    echo $selected."</br>";
 }
 ?>
 
