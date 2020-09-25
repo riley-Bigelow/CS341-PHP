@@ -7,13 +7,13 @@ You major is: <?php echo $_GET["major"];?><br>
 Comments: <?php echo $_GET["comments"];?> <br>
 <?php
 
-if(empty($_POST['day'])){
+if(empty($_GET['continents'])){
     echo "You live in the Ocean";
 }else{
-    $N = count($_POST['day']);
+    $N = count($_GET['continents']);
     echo("You have visited $N Continent(s): ");
     for($i=0; $i < $N; $i++){
-        echo($_POST['continents'][$i] . " ");
+        echo($_GET['continents'][$i] . " ");
     }
 }
 ?>
