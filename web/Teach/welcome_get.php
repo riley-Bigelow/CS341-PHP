@@ -7,7 +7,7 @@ You major is: <?php echo $_POST["major"];?><br>
 Comments: <?php echo $_POST["comments"];?> <br>
 <?php
 if(!empty($_POST['continents'])){
-    echo You have visited:;
+    echo"You've visited:<br>";
     // Loop to store and display values of individual checked checkbox.
     foreach($_POST['continents'] as $selected){
     echo $selected."</br>";
