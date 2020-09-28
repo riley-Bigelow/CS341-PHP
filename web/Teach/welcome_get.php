@@ -1,8 +1,12 @@
+<?php
+$name = htmlspecialchars($_POST["name"]);
+$email = htmlspecialchars($_POST["email"]);
+?>
+
 <html>
 <body>
-
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo "<a href="mailto:$_POST["email"]">$_POST["email"]</a>";?><br> 
+Welcome <?=$name ?><br>
+Your email address is: <a href="mailto:<?=$email ?>"><?=$email ?></a><br> 
 You major is: <?php echo $_POST["major"];?><br>
 Comments: <?php echo $_POST["comments"];?> <br>
 <?php
