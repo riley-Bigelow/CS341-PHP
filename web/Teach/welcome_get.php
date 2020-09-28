@@ -2,7 +2,7 @@
 <body>
 
 Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"];?><br> 
+Your email address is: <?php echo "<a href='mailto:{$email}";?><br> 
 You major is: <?php echo $_POST["major"];?><br>
 Comments: <?php echo $_POST["comments"];?> <br>
 <?php
