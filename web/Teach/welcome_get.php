@@ -18,7 +18,7 @@ if(!empty($_POST['continents'])){
     }
 }
 else{
-    echo "None of the boxes were checked";
+    echo "You live in the Ocean";
 }
 ?>
 
