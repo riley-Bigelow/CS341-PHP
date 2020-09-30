@@ -100,3 +100,8 @@ body {
     margin-bottom: 20px;
   }
 }
+
+#footer{
+  min-height: 300px;
+  background-image: linear-gradient(white, orange);
+}
