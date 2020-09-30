@@ -3,11 +3,18 @@ body {
   height: 100%;
   color: #777;
   line-height: 1.8;
-  background-color:rgba(122, 116, 116, 0.973);
+  background-color:white;
 }
 
+/* Style the header */
+.header {
+  background-color: white;
+  background-image: linear-gradient(white, rgb(0, 163, 215));
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
 
-/* First image (Logo. Full height) */
 #topbtm {
   background-color: rgb(248, 172, 9);
   background-attachment: fixed;
@@ -22,7 +29,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50px;
+  height: 75px;
 }
 #center{
   background-color: rgb(146, 210, 99);
@@ -30,83 +37,73 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25px;
+  height: 75px;
 }
 
 #logo{
+  background-image: url('kwik-e-mart.png');
   background-color: white;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 130px;
+  height: 25px;
   text-align: center;
 }
-#E{
-  font-size: 125px;
+
+#header{
+  left:0;
+  right:0;
+
 }
-#logo h1{
-  color: black;
-  -webkit-text-fill-color: red; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: black;
-  font-size: 100px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 10px;
-}
+
 #shop{
-  background-color: rgb(160, 35, 248);
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
 }
 
+* {
+  box-sizing: border-box;
+}
 
-.label{
-    padding: 25px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
-#about{
-    background-color: white;
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+.shop{
+  padding-top: 50px;
 }
-.carousel-inner img {
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  padding-top: 20PX;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    height: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-#assignbtn{
-  margin: 10px;
-  background: rgb(160, 35, 248);
-  transition: width 2s;
-  transition-timing-function: ease;
 }
-#assignbtn:hover {
-  width: 300px;
-}
-#skills{
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-#pg1{
-  width:80%
-}
-
-#pg2{
-  width:65%
-}
-#pg3{
-  width:70%
-}
-#pg4{
-  width:75%
-}
-#pg5{
-  width:70%
-}
-#pg6{
-  width:60%
-}
-#pg7{
-  width:20%
-}
-
-
-
