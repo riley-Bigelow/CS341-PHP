@@ -21,6 +21,12 @@ body {
   right:0;
   width: 100%;
 }
+.cimg {
+  float: left;
+  width:  100px;
+  height: 350px;
+  object-fit: cover;
+}
 #cart{
   font-size:25px;
 }
@@ -67,7 +73,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   padding: 16px;
-  text-align: center;
+  text-align: left;
   background-color: #f1f1f1;
   
 }
@@ -77,8 +83,14 @@ body {
 }
 
 .container {
-  padding: 2px 16px;
+  padding: 2px;
 }
+#lcard{
+  margin-top: 20px;
+  left:0;
+  right:0;
+}
+
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
