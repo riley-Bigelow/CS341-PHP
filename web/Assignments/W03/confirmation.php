@@ -42,7 +42,7 @@
         <div class="shop">
             <h1 id="cartMsg">Confirmation</h1>
         </div>
-        <php? 
+        <?php 
             var_dump($_POST);
         ?>
         </div>
