@@ -1,3 +1,7 @@
+<?php 
+            var_dump($_POST);
+        ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,9 +46,6 @@
         <div class="shop">
             <h1 id="cartMsg">Confirmation</h1>
         </div>
-        <?php 
-            var_dump($_POST);
-        ?>
         </div>
             <div class="container-fluid" id="footer">
         </div>
