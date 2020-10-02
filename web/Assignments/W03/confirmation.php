@@ -67,9 +67,11 @@
                     if($add[1] != ""){
                     echo "$add[1]<br>";
                     }
-                    echo "$add[2], ";
+                    echo "$add[2],";
+                    echo " ";
                     echo "$add[3] ";
-                    echo "$add[4]"
+                    echo " ";
+                    echo "$add[4]";
             ?>
         </div>
             <div class="container-fluid" id="footer">
