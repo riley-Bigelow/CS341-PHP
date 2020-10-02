@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#about"><i class="fa fa-user"></i>ASSIGNMENTS</a>
+                  <a class="nav-link" href="../../assignments.php"><i class="fa fa-user"></i>ASSIGNMENTS</a>
                 </li>
               </ul>
             </div>  
