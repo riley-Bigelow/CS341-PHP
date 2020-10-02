@@ -1,10 +1,9 @@
 <?php 
-            var_dump($_POST);
             $items = $_POST['item'];
             $price = $_POST['price'];
             $quant = $_POST['quant'];
             $tp = $_POST['tp'];
-            var_dump($items);
+            $add = $_POST['tp'];
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +51,8 @@
             <h1 id="cartMsg">Confirmation</h1>
         </div>
         <div class="confirmation">
-            <h3>Thank you for your purchase, You Purchased the following items:</h3>
+            <h3>Thank you for your purchase.<br>
+                You Purchased the following items:</h3>
             <ul>
             <?php
     
@@ -61,6 +61,16 @@
                     }
             ?>
             </ul>
+            <h3> Your order will be sent to</h3>
+            <?php
+                    echo "$add[0]";
+                    if($add[1] != ""){
+                    echo "$add[1]";
+                    }
+                    echo "$add[2] ,";
+                    echo "$add[3]";
+                    echo "$add[4]"
+            ?>
         </div>
             <div class="container-fluid" id="footer">
         </div>
