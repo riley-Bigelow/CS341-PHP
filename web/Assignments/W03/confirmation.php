@@ -50,9 +50,8 @@
             <h3>Thank you for your purchase, You Purchased the following items:</h3>
             <ul>
             <?php
-                echo "<li> Item: $array.$item[0]<br> Price per Unit: $price[0]<br> Quantity: $quant[0]<br> Item: $tp[0]<br></li>";
-                 for ($i=0; $i < count($item) ; $i++) { 
-                    echo "<li> Item: $item[$i]<br> Price per Unit: $price[$i]<br> Quantity: $quant[$i]<br> Item: $tp[$i]<br></li>";
+                 for ($i=0; $i < count($_POST.$item) ; $i++) { 
+                    echo "<li> Item: $_POST.$item[$i]<br> Price per Unit: $_POST.$price[$i]<br> Quantity: $_POST.$quant[$i]<br> Item: $_POST.$tp[$i]<br></li>";
                     }
             ?>
             </ul>
