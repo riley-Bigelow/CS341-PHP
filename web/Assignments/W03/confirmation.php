@@ -67,8 +67,8 @@
                     if($add[1] != ""){
                     echo "$add[1]<br>";
                     }
-                    echo "$add[2] ,";
-                    echo "$add[3]";
+                    echo "$add[2], ";
+                    echo "$add[3] ";
                     echo "$add[4]"
             ?>
         </div>
