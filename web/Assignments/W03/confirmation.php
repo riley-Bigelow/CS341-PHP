@@ -3,7 +3,7 @@
             $price = $_POST['price'];
             $quant = $_POST['quant'];
             $tp = $_POST['tp'];
-            $add = $_POST['tp'];
+            $add = $_POST['add'];
 ?>
 
 <!DOCTYPE html>
