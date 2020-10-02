@@ -71,13 +71,24 @@ class ShoppingCart {
             document.getElementById('check-out-btn').innerHTML = button;
         }
     }
+
+    displayForm(){
+            document.getElementById('cartMsg').innerHTML = "Cart Checkout";
+            console.log(this.cart)
+	        let itemHtml = this.cart.reduce((html, item) => html +=  
+	        this.generateFormHtml(item), '');
+            document.getElementById('checkList').innerHTML = itemHtml;
+            //document.getElementById('cart-total').innerHTML = '$'+total.toFixed(2);
+           // let button = this.generateCheckoutBtn();
+            //document.getElementById('check-out-btn').innerHTML = button;
+        }
     generateCheckoutBtn() {
         return `
         <a href="checkout.html" class="btn btn-success" role="button">Check Out</a>
         <a href="W03Assign.html" class="btn btn-warning" role="button">Continue Shopping</a>
         `;
       }
-      generateItemHtml(item) {
+    generateItemHtml(item) {
         return `
         <div class="product">
             <div class="product-details">
@@ -98,27 +109,15 @@ class ShoppingCart {
                 <div class="product-line-price"> Total Price: $${item.totalPrice}</div>
         </div>`;
       }
-      generateItemHtml(item) {
+      generateFormHtml(item) {
         return `
-        <div class="product">
-            <div class="product-details">
-                <div class="product-title">${item.itemName}</div>
-            </div>
-            <div class="product-price">Individual Price: $${item.price}</div>
-            <div class="product-quantity">
-                Quantity: <input type="number" value="${item.quanitity}" min="1", id="${item.itemName}Q">
-            </div>
-            <div class="product-removal">
-                <button class="btn btn-warning" onClick="myCart.updateItem('${item.itemName}',document.getElementById('${item.itemName}Q').value)">
-                    Update
-                </button>
-                <button class="btn btn-danger" onClick="myCart.deleteItem('${item.itemName}')">
-                    Remove
-                </button>
-            </div>
-                <div class="product-line-price"> Total Price: $${item.totalPrice}</div>
+        <div class="form-group">
+            Item: <input type="text" class="form-control" id="${item.itemName}" name="${item.itemName}" value="${item.itemName}" readonly><br>
+            Individual Price: <input type="text" class="form-control" id="${item.itemName}" name="${item.itemName}" value="${item.price}" readonly><br> 
+             Quantity: <input type="text"class="form-control"  value="${item.quanitity}", id="${item.itemName}Q" readonly>
+            Total Price: <input type="text" class="form-control" value="$${item.totalPrice}" id="${item.itemName}Q" readonly>
         </div>`;
-      } 
+      }
 
 }
 

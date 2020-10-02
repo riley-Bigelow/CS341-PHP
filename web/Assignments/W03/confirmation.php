@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kwik-E-Mart Cart</title>
+        <title>Kwik-E-Mart Confirmation</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +14,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="week3js.js"></script>
     </head>
-    <body onload="myCart.displayCart()" >
+    <body>
         <nav class="navbar navbar-expand-md bg-light navbar-light ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
@@ -40,21 +40,10 @@
               </ul>
           </nav> 
         <div class="shop">
-            <h1 id="cartMsg"></h1>
-            <div id="cartList"></div>
-
-            <div class="totals">
-                <div class="totals-item totals-item-total">
-                    <label><b>Grand Total:</b></label>
-                <div class="totals-value" id="cart-total"></div>
-                <div class="check-out-btn" id="check-out-btn"></div>
-            </div>
+            <h1 id="cartMsg">Confirmation</h1>
         </div>
-        
-
-</div>
         </div>
-        <div class="container-fluid" id="footer">
+            <div class="container-fluid" id="footer">
         </div>
     </body>
 </html>

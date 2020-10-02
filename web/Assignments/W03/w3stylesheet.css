@@ -148,3 +148,7 @@ body {
 .product div{
   padding-bottom: 5px;
 }
+.form-group{
+  margin-bottom: 40px;
+  border-bottom: 4px dotted black;
+}

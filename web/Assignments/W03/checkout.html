@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kwik-E-Mart Cart</title>
+        <title>Kwik-E-Mart Check Out</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +14,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="week3js.js"></script>
     </head>
-    <body onload="myCart.displayCart()" >
+    <body onload="myCart.displayForm()" >
         <nav class="navbar navbar-expand-md bg-light navbar-light ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
@@ -37,22 +37,24 @@
                 <li class="nav-item">
                   <a class="nav-link" href="W03Assign.html"><i class="fas fa-store" id="cart"></i></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart" id="cart"></i></a>
+                </li>
               </ul>
           </nav> 
         <div class="shop">
-            <h1 id="cartMsg"></h1>
-            <div id="cartList"></div>
-
-            <div class="totals">
-                <div class="totals-item totals-item-total">
-                    <label><b>Grand Total:</b></label>
-                <div class="totals-value" id="cart-total"></div>
-                <div class="check-out-btn" id="check-out-btn"></div>
-            </div>
-        </div>
-        
-
-</div>
+            <h1 id="cartMsg">Checkout</h1>
+            <form action="confirmation.php" method="post">
+                <div id="checkList"></div>
+                <div class="form-group" >
+                Address 1: <input type="text" class="form-control" id="add1" name="add1" placeholder="address1.." required><br><br>
+                Address 2: <input type="text" class="form-control" id="add2" name="add2" placeholder="address2.." > <br><br>
+                City: <input type="text" class="form-control" id="city" name="city" placeholder="City.." required> <br><br>
+                State: <input type="text" class="form-control"  id="st" name="st" placeholder="State.." required> <br><br>
+                Zip: <input type="zip" class="form-control" id="zip" name="zip" placeholder="Zip.." required> <br><br>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
         <div class="container-fluid" id="footer">
         </div>
