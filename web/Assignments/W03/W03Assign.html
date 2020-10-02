@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>kwik-e-mart</title>
+        <title>Kwik-E-Mart</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="w3stylesheet.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script>src="week3js.js"</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="week3js.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md bg-light navbar-light ">
@@ -32,10 +32,10 @@
           <img src="kwik-e-mart.png" alt="logo">
         </div>
       </div>
-          <nav class="navbar navbar-expand-md bg-success navbar-light ">
+          <nav class="navbar navbar-expand-md bg-success navbar-light " id="sbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#about"><i class="fa fa-shopping-cart" id="cart"></i></a>
+                  <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart" id="cart"></i></a>
                 </li>
               </ul>
           </nav> 
@@ -47,10 +47,10 @@
                   <div class="container">
                     <h4><b>Doughnuts</b></h4> 
                     <p>Price: $6.50</p>
-                    Quanity: <input type="number" name="quantity" min="0" max="100" id="DNQ">
+                    Quanity: <input type="number" name="quantity" value="0" min="0" max="100" id="DNQ">
                     <div class="container" id="lcard">
                       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#dnut">Details</button>
-                      <button type="button" class="btn btn-outline-warning"onclick="addToCart()">Add To Cart</button>
+                      <button type="button" class="btn btn-outline-warning"onclick="myCart.addToCart('Doughnuts',document.getElementById('DNQ').value,6.50)">Add To Cart</button>
                       <div id="dnut" class="collapse">
                         1 Dozen Classic pink Frosted Sprinkled Doughnuts.
                         The perfect start to your day at any job including
@@ -66,10 +66,10 @@
                   <div class="container">
                     <h4><b>BUZZ Cola</b></h4> 
                     <p>Price: $8.50</p>
-                    Quanity: <input type="number" name="quantity" min="0" max="100" id="BCQ">
+                    Quanity: <input type="number" name="quantity" value="0" min="0" max="100" id="BCQ">
                     <div class="container" id="lcard">
                       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#buzz">Details</button>
-                      <button type="button" class="btn btn-outline-warning" onclick="addToCart()">Add To Cart</button>
+                      <button type="button" class="btn btn-outline-warning" onclick="myCart.addToCart('Buzz Cola',document.getElementById('BCQ').value,8.50)">Add To Cart</button>
                       <div id="buzz" class="collapse">
                         12 pack Lemon Flavor. Ingredients: Carbonated water, 
                         high fructose corn syrup, caramel color, phosphoric acid,
@@ -85,10 +85,10 @@
                   <div class="container">
                     <h4><b>Krusty-O's</b></h4> 
                     <p>Price: $2.99</p>
-                    Quanity: <input type="number" name="quantity" min="0" max="100" id="KOQ">
+                    Quanity: <input type="number" name="quantity" value="0" min="0" max="100" id="KOQ">
                     <div class="container" id="lcard">
                       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#krustyos">Details</button>
-                      <button type="button" class="btn btn-outline-warning"onclick="addToCart()">Add To Cart</button>
+                      <button type="button" class="btn btn-outline-warning"onclick="myCart.addToCart('Krusty-Os',document.getElementById('KOQ').value,2.99)">Add To Cart</button>
                       <div id="krustyos" class="collapse">
                         Is there a jagged piece of metal in every box? Maybe.
                         Is there nutritional value in every box? No.
@@ -104,10 +104,10 @@
                   <div class="container">
                     <h4><b>Krusty Burger</b></h4> 
                     <p>Price: $9.00</p>
-                    Quanity: <input type="number" name="quantity" min="0" max="100"  id="KBQ">
+                    Quanity: <input type="number" name="quantity" value="0" min="0" max="100"  id="KBQ">
                     <div class="container" id="lcard">
                       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#burger">Details</button>
-                      <button type="button" class="btn btn-outline-warning"onclick="addToCart()">Add To Cart</button>
+                      <button type="button" class="btn btn-outline-warning"onclick="myCart.addToCart('Krusty Burger',document.getElementById('KBQ').value,9.00)">Add To Cart</button>
                       <div id="burger" class="collapse">
                         1/3 lb. Burger with Secret Sauce, cheddar cheese sauce, a giant tomato slice, 
                         iceberg lettuce, on a specialty bun. 
@@ -123,10 +123,10 @@
                   <div class="container">
                     <h4><b>Squishees</b></h4> 
                     <p>Price: $1.99</p> 
-                    Quanity: <input type="number" name="quantity" min="0" max="100" id="SQ">
+                    Quanity: <input type="number" name="quantity" value="0" min="0" max="100" id="SQ">
                     <div class="container" id="lcard">
                       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#squishe">Details</button>
-                      <button type="button" class="btn btn-outline-warning"onclick="addToCart()">Add To Cart</button>
+                      <button type="button" class="btn btn-outline-warning"onclick="myCart.addToCart('Squishee',document.getElementById('SQ').value,1.99)">Add To Cart</button>
                       <div id="squishe" class="collapse">
                          Dangerous to health and contains no natural ingredients, 
                          not even pure water. Enjoy a a thick, gloopy, tooth-rotting 
