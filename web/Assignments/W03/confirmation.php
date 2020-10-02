@@ -1,6 +1,10 @@
 <?php 
             var_dump($_POST);
-        ?>
+            $items = $_POST['items'];
+            $price = $_POST['price'];
+            $quant = $_POST['quant'];
+            $tp = $_POST['tp'];
+?>
 
 <!DOCTYPE html>
 <html>
