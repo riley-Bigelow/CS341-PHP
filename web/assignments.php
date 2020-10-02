@@ -40,8 +40,13 @@
         </nav>
         <div class="container-fluid" id="header">
             <div class="display-middle">
-                <h1>COMING SOON</h1>
+                <h1>Assignments</h1>
             </div>
         </div>
+        <div class="container-fluid" id="header">
+          <ul>
+            <li>
+              <a href="Assignments/W03/W03Assign.html">Week 3: Shopping Cart</a>
+            </li>
     </body>
 </html>

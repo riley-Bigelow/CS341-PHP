@@ -68,11 +68,11 @@
                         </ul>
                         <!-- The slideshow -->
                         <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="w03assign.PNG" alt="image" width="1000" height="400">
+                            </div>
                             <div class="carousel-item active">
                                 <img src="cs3.jpg" alt="image" width="1000" height="400">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="cs1.png" alt="image" width="1000" height="400">
                             </div>
                             <div class="carousel-item">
                                 <img src="cs2.png" alt="image" width="1000" height="400">
