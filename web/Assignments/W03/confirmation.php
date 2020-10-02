@@ -46,14 +46,13 @@
         <div class="shop">
             <h1 id="cartMsg">Confirmation</h1>
         </div>
-        <div>
+        <div class="confirmation">
             <h3>Thank you for your purchase, You Purchased the following items:</h3>
             <ul>
-            <?p
-            for ($i=0; $i < count($item) ; $i++) { 
-                echo "<li> Item: $item{$i}<br> Price per Unit: $price{$i}<br> Quantity: $quant{$i}<br> Item: $tp{$i}<br></li>";
-            }
-            
+            <?php
+                 for ($i=0; $i < count($item) ; $i++) { 
+                    echo "<li> Item: $item{$i}<br> Price per Unit: $price{$i}<br> Quantity: $quant{$i}<br> Item: $tp{$i}<br></li>";
+                    }
             ?>
             </ul>
         </div>
