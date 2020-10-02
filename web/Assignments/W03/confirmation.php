@@ -4,6 +4,7 @@
             $price = $_POST['price'];
             $quant = $_POST['quant'];
             $tp = $_POST['tp'];
+            var_dump($items);
 ?>
 
 <!DOCTYPE html>
