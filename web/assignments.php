@@ -48,5 +48,7 @@
             <li>
               <a href="Assignments/W03/W03Assign.html">Week 3: Shopping Cart</a>
             </li>
+          </ul>
+        </div>
     </body>
 </html>
