@@ -1,6 +1,6 @@
 <?php 
             var_dump($_POST);
-            $items = $_POST['items'];
+            $items = $_POST['item'];
             $price = $_POST['price'];
             $quant = $_POST['quant'];
             $tp = $_POST['tp'];
@@ -55,6 +55,7 @@
             <h3>Thank you for your purchase, You Purchased the following items:</h3>
             <ul>
             <?php
+    
                  for ($i=0; $i < count($items) ; $i++) { 
                     echo "<li> Item: $items[$i]<br> Price per Unit: $price[$i]<br> Quantity: $quant[$i]<br> Item: $tp[$i]<br></li>";
                     }
