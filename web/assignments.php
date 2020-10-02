@@ -43,7 +43,7 @@
                 <h1>Assignments</h1>
             </div>
         </div>
-        <div class="container-fluid" id="about">
+        <div class="container-fluid">
           <ul>
             <li>
               <a href="Assignments/W03/W03Assign.html">Week 3: Shopping Cart</a>
