@@ -47,11 +47,11 @@
             <form action="confirmation.php" method="post">
                 <div id="checkList"></div>
                 <div class="form-group" >
-                Address 1: <input type="text" class="form-control" id="add1" name="add1" placeholder="address1.." required><br><br>
-                Address 2: <input type="text" class="form-control" id="add2" name="add2" placeholder="address2.." > <br><br>
-                City: <input type="text" class="form-control" id="city" name="city" placeholder="City.." required> <br><br>
-                State: <input type="text" class="form-control"  id="st" name="st" placeholder="State.." required> <br><br>
-                Zip: <input type="zip" class="form-control" id="zip" name="zip" placeholder="Zip.." required> <br><br>
+                Address 1: <input type="text" class="form-control" id="add1" name="add[]" placeholder="address1.." required><br><br>
+                Address 2: <input type="text" class="form-control" id="add2" name="add[]" placeholder="address2.." > <br><br>
+                City: <input type="text" class="form-control" id="city" name="add[]" placeholder="City.." required> <br><br>
+                State: <input type="text" class="form-control"  id="st" name="add[]" placeholder="State.." required> <br><br>
+                Zip: <input type="zip" class="form-control" id="zip" name="add[]" placeholder="Zip.." required> <br><br>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
