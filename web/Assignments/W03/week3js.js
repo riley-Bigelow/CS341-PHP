@@ -112,10 +112,10 @@ class ShoppingCart {
       generateFormHtml(item) {
         return `
         <div class="form-group">
-            Item: <input type="text" class="form-control" id="${item.itemName}" name="${item.itemName}" value="${item.itemName}" readonly><br>
-            Individual Price: <input type="text" class="form-control" id="${item.itemName}" name="${item.itemName}" value="${item.price}" readonly><br> 
-             Quantity: <input type="text"class="form-control"  value="${item.quanitity}", id="${item.itemName}Q" readonly>
-            Total Price: <input type="text" class="form-control" value="$${item.totalPrice}" id="${item.itemName}Q" readonly>
+            Item: <input type="text" class="form-control" id="${item.itemName}" name="item[]" value="${item.itemName}" readonly><br>
+            Individual Price: <input type="text" class="form-control" id="${item.itemName}price" name="price[]" value="${item.price}" readonly><br> 
+             Quantity: <input type="text"class="form-control"  value="${item.quanitity}", id="${item.itemName}Q" name="quant[]" readonly>
+            Total Price: <input type="text" class="form-control" value="$${item.totalPrice}" id="${item.itemName}Q" name="tp[]" readonly>
         </div>`;
       }
 
