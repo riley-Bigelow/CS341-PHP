@@ -63,9 +63,9 @@
             </ul>
             <h3> Your order will be sent to</h3>
             <?php
-                    echo "$add[0]";
+                    echo "$add[0]<br>";
                     if($add[1] != ""){
-                    echo "$add[1]";
+                    echo "$add[1]<br>";
                     }
                     echo "$add[2] ,";
                     echo "$add[3]";
