@@ -52,15 +52,21 @@
 					</div>
 					<div class="display">
 						<ul id="recipeList" class = "results">
-							<?php
-								echo $id;
-                                $statement = $db->query('SELECT recipename, recipeid FROM recipes Where deletedat IS NULL');
-                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                                {
-									
-
-                                }
-                            ?>
+							<li>
+								<h2>Title</h2>
+								<div>
+									<h3>Instructions</h3>
+									<p>place holder...</p>
+								</div>
+								<div>
+									<h3>Ingreidents</h3>
+									<p>Place holder....</p>
+								</div>
+      							<div class= "topnav">
+          							<a href="#home" class="button" id="searchBackBtn"><img src="back.png" style="width:42px;height:42px;"><br>Back to results</a>
+          							<a href="#home" class="button" id="add""><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add to CooKbook</a>
+      							</div>
+							</li>
 						</ul>
 					</div>			
 				</div>
