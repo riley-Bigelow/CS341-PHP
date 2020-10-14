@@ -56,16 +56,25 @@
 								<h2>Title</h2>
 								<div>
 									<h3>Instructions</h3>
-									<p>place holder...</p>
+									<ul>
+									<?php
+										$statement = $db->query('SELECT instructions 
+																 FROM instructions 
+																Where deletedat IS NULL
+																AND recipeid = :id');
+										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+										{
+											echo '<li>' .
+													'<p>'. $row['instructions'] . '</p>'.
+												 '</li>';
+										}
+									?>
+									</ul>
 								</div>
 								<div>
 									<h3>Ingreidents</h3>
 									<p>Place holder....</p>
 								</div>
-      							<div class= "topnav">
-          							<a href="#home" class="button" id="searchBackBtn"><img src="back.png" style="width:42px;height:42px;"><br>Back to results</a>
-          							<a href="#home" class="button" id="add""><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add to CooKbook</a>
-      							</div>
 							</li>
 						</ul>
 					</div>			
