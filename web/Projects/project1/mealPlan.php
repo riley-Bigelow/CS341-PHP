@@ -55,7 +55,7 @@
                                 $statement = $db->query('SELECT recipeName FROM recipes');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
-                                   echo '<li>' . $row['recipeName'] . '</li>';
+                                   echo '<li class="item">' . $row['recipeName'] . '</li>';
                                 }
                             
                             ?>
