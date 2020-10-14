@@ -56,19 +56,15 @@
 								<h2>Title</h2>
 								<div>
 									<h3>Instructions</h3>
-									<ul>
 									<?php
 										$id = $_GET['id'];
 										$statement = $db->query('SELECT instructions FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
-											echo '<li>' .
-									   					'<p>'. $row['instructions'] . '</p>'.
-										 		'</li>';
+											echo '<p>'. $row['instructions'] . '</p>';
 										}
 									?>
-									</ul>
 								</div>
 								<div>
 									<h3>Ingreidents</h3>
