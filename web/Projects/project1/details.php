@@ -58,6 +58,8 @@
 									<h3>Instructions</h3>
 									<ul>
 									<?php
+										$id = $_GET['id'];
+										echo $id;
 										$statement = $db->query('SELECT instructions  FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
