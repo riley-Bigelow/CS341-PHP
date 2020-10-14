@@ -55,7 +55,7 @@
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
 									echo '<li class="item"'. 'id="'. $row[recipeid].'">' .
-											'<a href="details.php">'.
+											'<a href="details.php?id='.$row[recipeid].'">'.
 									   			'<p>'. $row['recipename'] . '</p>'.
 											'</a>'.
 										 '</li>';
