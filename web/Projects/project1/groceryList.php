@@ -33,7 +33,7 @@
 				<div class ="content">
 					<div class="gheader" id = "home"> 
 						<div class= "title">
-							<h4>My Cookbook</h4>
+							<h4>My Grocery List</h4>
 						</div>
 					</div>
 					<div class="topnav">
