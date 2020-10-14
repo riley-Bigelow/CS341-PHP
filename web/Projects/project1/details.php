@@ -39,7 +39,7 @@
 						</div>
 					</div>
 					<div class="topnav">
-						<a href="#home"  id="cookbook"  class="button" style = "background-color: #ffff66"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
+						<a href="#home"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
 						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
@@ -60,11 +60,11 @@
 									<?php
 										$id = $_GET['id'];
 										echo $id;
-										$statement = $db->query('SELECT instructions  FROM instructions Where deletedat IS NULL AND recipeid = :id');
+										$statement = $db->query('SELECT instructions FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
-											$instructions = $sRow["instructions"];
+											$instructions = $row["instructions"];
 											echo $instructions;
 										}
 									?>
