@@ -33,7 +33,7 @@
 				<div class ="content">
 					<div class="mheader" id = "home"> 
 						<div class= "title">
-							
+
 							<h4>My Mealplan</h4>
 						</div>
 					</div>
@@ -46,10 +46,10 @@
 				
 						<ul id="recipeList" class = "results">
                             <?php
-                                $statement = $db->query('SELECT recipename FROM recipes');
+                                $statement = $db->query('SELECT recipename, recipeid FROM recipes');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
-								   echo '<li class="item">' .
+								   echo '<li class="item"'. 'id="'. $row[recipeid].'">' .
 											'<a href="details.php">'.
 											   '<p>'. $row['recipename'] . '</p>'.
 											'</a>'.
