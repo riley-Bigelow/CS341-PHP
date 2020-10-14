@@ -63,9 +63,7 @@
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
 											$instructions = $sRow["instructions"];
-											echo '<li>' .
-													'<p>'. $instructions . '</p>'.
-												 '</li>';
+											echo $instructions;
 										}
 									?>
 									</ul>
