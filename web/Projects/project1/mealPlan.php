@@ -58,7 +58,7 @@
 								   echo '<li class="item">' .
 											'<a href="details.php">'.
 											   '<p>'. $row['recipename'] . '</p>'.
-											'</a>'
+											'</a>'.
 										'</li>';
                                 }
                             
