@@ -51,7 +51,7 @@
 					<div class="display">
 						<ul id="recipeList" class = "results">
                             <?php
-                                $statement = $db->query('SELECT recipename, recipeid FROM recipes');
+                                $statement = $db->query('SELECT recipename, recipeid FROM recipes Where deletedat IS NULL');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
 									echo '<li class="item"'. 'id="'. $row[recipeid].'">' .

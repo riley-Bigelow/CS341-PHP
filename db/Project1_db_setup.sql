@@ -17,6 +17,9 @@ deletedAt 		timestamp,
 deletedBy		int references users(userId)
 );
 
+ALTER TABLE recipes
+ADD COLUMN isPlanned boolean ;
+
 CREATE TABLE ingredients (
 ingredientsId	SERIAL								PRIMARY KEY,
 recipeId		int  references recipes(recipeId)	NOT NULL,
@@ -49,6 +52,8 @@ INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,createdAt,create
 VALUES (DEFAULT, 'Broccoli Soup',4,7.00,Now(),1);
 INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,createdAt,createdBy) 
 VALUES (DEFAULT, 'Surf & Turf',2,20.00,Now(),1);
+
+
 
 -- ingredients data inserts 
 INSERT INTO ingredients (ingredientsId,recipeId,ingredientName,amount,measurement,createdAt,createdBy) 
@@ -98,4 +103,4 @@ INSERT INTO instructions(instructionsId,recipeId,instructions,createdAt,createdB
 VALUES(DEFAULT,3,'Cook steak to desired level. Sautee shrimp in garlic and butter',Now(),1);
 
 
-'\pset pager off'
+\pset pager off
