@@ -59,13 +59,13 @@
 									<ul>
 									<?php
 										$id = $_GET['id'];
-										echo $id;
 										$statement = $db->query('SELECT instructions FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
-											$instructions = $row["instructions"];
-											echo $instructions;
+											echo '<li>' .
+									   					'<p>'. $row['instructions'] . '</p>'.
+										 		'</li>';
 										}
 									?>
 									</ul>
