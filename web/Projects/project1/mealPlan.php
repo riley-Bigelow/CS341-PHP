@@ -1,3 +1,24 @@
+<?php
+   try
+    {
+        $dbUrl = getenv('DATABASE_URL');       
+        $dbOpts = parse_url($dbUrl);         
+        $dbHost = $dbOpts["host"];
+        $dbPort = $dbOpts["port"];
+        $dbUser = $dbOpts["user"];
+        $dbPassword = $dbOpts["pass"];
+        $dbName = ltrim($dbOpts["path"],'/');
+        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch (PDOException $ex)
+    {
+        echo 'Error!: ' . $ex->getMessage();
+        die();
+    }
+?>
+        
+
 <!DOCTYPE html>
 <html lang="en-US" style="height: 100%;">
 <head>
@@ -21,7 +42,7 @@
 						<a href="#home" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
 						<a class="button" id='clear'><img src="refresh-icon.png" style="width:42px;height:42px;"><br>Reset Data</a>
 						<div class="search-container">
-							<form >
+							<form action="Search.php" method="POST">
 								 <input type="text" id='search' placeholder="Search for a recipe.." name="search" required>
 								  <button id="searchBtn">Submit</button>
 							</form>
@@ -30,7 +51,14 @@
 					<div class="display">
 				
 						<ul id="recipeList" class = "results">
-						<!-- your task list should be build here. -->
+                            <?php
+                                $statement = $db->query('SELECT recipeName FROM recipes');
+                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                                {
+                                   echo '<li>' . $row['recipeName'] . '</li>';
+                                }
+                            
+                            ?>
 						</ul>
 					
 					</div>			
