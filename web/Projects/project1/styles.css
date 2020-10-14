@@ -28,6 +28,27 @@ height: 100%;
   font-size: 35px;
   grid-area: header;
 }
+.gheader {
+  background-image: url('gListBackground.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  grid-area: header;
+}
+.mheader {
+  background-image: url('mPlanBackground.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  grid-area: header;
+}
+
 .title{
   text-align: center;
   color: black;

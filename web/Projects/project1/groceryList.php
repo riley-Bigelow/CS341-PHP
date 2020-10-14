@@ -31,7 +31,7 @@
 		<div class="grid-container">
 			<div class= "middle">
 				<div class ="content">
-					<div class="header" id = "home"> 
+					<div class="gheader" id = "home"> 
 						<div class= "title">
 							<h4>My Cookbook</h4>
 						</div>
@@ -39,14 +39,7 @@
 					<div class="topnav">
 						<a href="#home"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
-						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
-						<a class="button" id='clear'><img src="refresh-icon.png" style="width:42px;height:42px;"><br>Reset Data</a>
-						<div class="search-container">
-							<form action="search.php" method="POST">
-								 <input type="text" id='search' placeholder="Search for a recipe.." name="search" required>
-								  <button id="searchBtn">Search</button>
-							</form>
-						</div>		
+						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>		
 					</div>
 					<div class="display">
 				

@@ -40,7 +40,7 @@
 						<a href="#home"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
-						<a class="button" id='clear'><img src="refresh-icon.png" style="width:42px;height:42px;"><br>Reset Data</a>
+						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Reset Data</a>
 						<div class="search-container">
 							<form action="search.php" method="POST">
 								 <input type="text" id='search' placeholder="Search for a recipe.." name="search" required>
@@ -49,7 +49,6 @@
 						</div>		
 					</div>
 					<div class="display">
-				
 						<ul id="recipeList" class = "results">
                             <?php
                                 $statement = $db->query('SELECT recipename FROM recipes');
@@ -61,10 +60,8 @@
 											'</a>'.
 										'</li>';
                                 }
-                            
                             ?>
 						</ul>
-					
 					</div>			
 				</div>
 			</div>
