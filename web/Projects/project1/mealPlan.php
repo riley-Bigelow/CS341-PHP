@@ -52,10 +52,10 @@
 				
 						<ul id="recipeList" class = "results">
                             <?php
-                                $statement = $db->query('SELECT recipeName FROM recipes');
+                                $statement = $db->query('SELECT recipename FROM recipes');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
-                                   echo '<li class="item">' . $row['recipeName'] . '</li>';
+                                   echo '<li class="item">' . $row['recipename'] . '</li>';
                                 }
                             
                             ?>
