@@ -39,7 +39,7 @@
 						</div>
 					</div>
 					<div class="topnav">
-						<a href="#home"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
+						<a href="cookBook.php"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
 						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
@@ -53,11 +53,18 @@
 					<div class="display">
 						<ul id="recipeList" class = "results">
 							<li>
-								<h2>Title</h2>
+								<?php 
+										$statement = $db->prepare('SELECT recipename FROM recipes Where deletedat IS NULL AND recipeid = :id');
+										$statement->execute(array(':id' => $id));
+										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+										{
+											echo '<h2>'. $row['recipename'] . '</h2>';
+										}
+								?>
+								
 								<div>
 									<h3>Instructions</h3>
 									<?php
-										$id = $_GET['id'];
 										$statement = $db->prepare('SELECT instructions FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
