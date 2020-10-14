@@ -46,7 +46,7 @@
 				
 						<ul id="recipeList" class = "results">
                             <?php
-                                $statement = $db->query('SELECT recipename, recipeid FROM recipes WHERE isplanner');
+                                $statement = $db->query('SELECT recipename, recipeid FROM recipes WHERE isplanned');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
 								   echo '<li class="item"'. 'id="'. $row[recipeid].'">' .
