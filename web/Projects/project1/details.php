@@ -75,7 +75,18 @@
 								</div>
 								<div>
 									<h3>Ingreidents</h3>
-									<p>Place holder....</p>
+									<ul>
+									<?php
+										$statement = $db->prepare('SELECT ingredientname FROM ingredients Where deletedat IS NULL AND recipeid = :id');
+										$statement->execute(array(':id' => $id));
+                               			 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+                                		{
+											echo '<li>' .
+									   				'<p>'. $row['ingredientname'] . '</p>'.
+												 '</li>';
+                                		}
+                           			 ?>
+									</ul>
 								</div>
 							</li>
 						</ul>
