@@ -63,7 +63,7 @@
 								?>
 								
 								<div>
-									<h3>Instructions</h3>
+									<h3>Instructions:</h3>
 									<?php
 										$statement = $db->prepare('SELECT instructions FROM instructions Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
@@ -74,15 +74,15 @@
 									?>
 								</div>
 								<div>
-									<h3>Ingreidents</h3>
+									<h3>Ingreidents:</h3>
 									<ul>
 									<?php
-										$statement = $db->prepare('SELECT ingredientname FROM ingredients Where deletedat IS NULL AND recipeid = :id');
+										$statement = $db->prepare('SELECT amount, measurement, ingredientname FROM ingredients Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
                                			 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 		{
 											echo '<li>' .
-									   				'<p>'. $row['ingredientname'] . '</p>'.
+									   				'<p>'. $row['amount'].' '.$row['measurement'].' '.$row['ingredientname'] . '</p>'.
 												 '</li>';
                                 		}
                            			 ?>
