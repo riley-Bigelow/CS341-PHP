@@ -16,7 +16,7 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
 	}
-	$ingredient = $_GET['search'];
+	$ingredient = $_POST['search'];
 	echo $ingredient;
 
 ?>
