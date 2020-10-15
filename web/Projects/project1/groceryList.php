@@ -46,7 +46,7 @@
 				
 						<ul id="recipeList" class = "results">
                             <?php
-                                $statement = $db->query('SELECT amount, measurement, ingredientname FROM ingredients INNER JOIN recipes ON recipes.recipeid = ingredients.recipeid WHERE recipes.deletedat IS NULL AND recipies.isplanned AND ingredients.deletedat IS NULL');
+                                $statement = $db->query('SELECT amount, measurement, ingredientname FROM ingredients INNER JOIN recipes ON ingredients.recipeid = recipes.recipeid WHERE recipes.isplanned and recipes.deletedat IS NULL and ingredients.deletedat IS NULL');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
 								   echo '<li class="item">' .
