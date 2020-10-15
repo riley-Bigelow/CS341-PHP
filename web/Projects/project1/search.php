@@ -54,8 +54,7 @@
 					<div class="display">
 						<ul id="recipeList" class = "results">
 							<?php
-								echo $ingredient;
-								$statement = $db->prepare('SELECT DISTINCT recipename FROM ingredients INNER JOIN recipes ON ingredients.recipeid = recipes.recipeid WHERE  recipes.deletedat IS NULL and ingredients.deletedat IS NULL AND Lower(ingredients.ingredientname) = Lower(:ingredient)');
+								$statement = $db->prepare('SELECT DISTINCT recipeid,recipename FROM ingredients INNER JOIN recipes ON ingredients.recipeid = recipes.recipeid WHERE  recipes.deletedat IS NULL and ingredients.deletedat IS NULL AND Lower(ingredients.ingredientname) = Lower(:ingredient)');
 								$statement->execute(array(':ingredient' => $ingredient));
                                	 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
