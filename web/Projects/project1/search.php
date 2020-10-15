@@ -17,7 +17,6 @@
         die();
 	}
 	$ingredient = $_POST['search'];
-	echo $ingredient;
 
 ?>
         
