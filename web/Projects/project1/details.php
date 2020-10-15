@@ -60,8 +60,8 @@
 										{
 											echo '<h2>'. $row['recipename'] . '</h2>'.
 												 '<div>
-													 <h3> Servings:'.$row['servings'].'</h3>
-												  </div>';
+													 <h3> Servings:</h3>'.' '. $row['servings']. 
+												  '</div>';
 										}
 								?>
 								
