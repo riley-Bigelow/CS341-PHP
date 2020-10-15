@@ -17,6 +17,7 @@
         die();
 	}
 	$ingredient = $_GET['search'];
+	echo $ingredient;
 
 ?>
         
