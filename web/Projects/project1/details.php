@@ -54,11 +54,14 @@
 						<ul id="recipeList" class = "results">
 							<li>
 								<?php 
-										$statement = $db->prepare('SELECT recipename FROM recipes Where deletedat IS NULL AND recipeid = :id');
+										$statement = $db->prepare('SELECT recipename, servings FROM recipes Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
-											echo '<h2>'. $row['recipename'] . '</h2>';
+											echo '<h2>'. $row['recipename'] . '</h2>'.
+												 '<div>
+													 <h3> Servings:'.$row['servings'].'</h3>
+												  </div>';
 										}
 								?>
 								
