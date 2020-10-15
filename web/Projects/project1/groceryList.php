@@ -50,7 +50,7 @@
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
 								   echo '<li class="item">' .
-								   			'<p>'. $row['amount'].' '.$row['measurement'].' '.$row['ingredientname'] . '</p>'.
+								   			'<p>'. $row['ingredientname'] . '</p>'.
 										'</li>';
                                 }
                             
