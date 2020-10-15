@@ -104,3 +104,4 @@ VALUES(DEFAULT,3,'Cook steak to desired level. Sautee shrimp in garlic and butte
 
 
 \pset pager off
+heroku pg:psql
