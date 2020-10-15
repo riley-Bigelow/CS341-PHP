@@ -43,12 +43,6 @@
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
 						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
-						<div class="search-container">
-							<form action="search.php" method="POST">
-								 <input type="text" id='search' placeholder="Search for a recipe.." name="search" required>
-								  <button id="searchBtn">Search</button>
-							</form>
-						</div>		
 					</div>
 					<div class="display">
 						<ul id="recipeList" class = "results">
