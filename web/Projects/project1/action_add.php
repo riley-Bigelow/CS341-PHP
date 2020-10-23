@@ -39,7 +39,9 @@ foreach($_POST['meas'] as $selected){
 	echo $selected."</br>";
 };
 echo $_POST['intrsuct']."</br>";
-echo $planned;
+
+echo $date."</br>";
+echo $planned."</br>";
 
 
 
@@ -78,7 +80,7 @@ echo $planned;
 		$statement->bindValue(':topicId', $topicId);
 
 		$statement->execute();
-	}*/
+	}
 }
 catch (Exception $ex)
 {
@@ -89,7 +91,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); 
+die(); */
 
 ?>
 
