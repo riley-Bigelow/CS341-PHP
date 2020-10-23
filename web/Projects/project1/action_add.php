@@ -24,7 +24,7 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $date = date('Y-m-d H:i:s');
-$planned = $_POST['plan'];
+$planned =  if(isset($_POST['plan'])) {"1"; }else"0";
 
 
 
@@ -45,7 +45,7 @@ echo $_POST['intrsuct']."</br>";
 echo $date."</br>";
 echo $planned."</br>";
 
-echo isset($_POST['plan']).;
+
 
 
 
