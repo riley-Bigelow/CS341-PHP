@@ -11,14 +11,14 @@ recipeId		SERIAL							PRIMARY KEY,
 recipeName		VARCHAR(100)					NOT NULL,
 servings 		int ,
 estimatedCost 	money,
+isPlanned 		boolean 						NOT NULL,
 createdAt 		timestamp 						NOT NULL,
 createdBy		int references users(userId) 	NOT NULL,
 deletedAt 		timestamp,
 deletedBy		int references users(userId)
 );
 
-ALTER TABLE recipes
-ADD COLUMN isPlanned boolean ;
+
 
 CREATE TABLE ingredients (
 ingredientsId	SERIAL								PRIMARY KEY,

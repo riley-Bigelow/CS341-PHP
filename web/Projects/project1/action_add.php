@@ -54,10 +54,10 @@ try
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
 	for ($x = 0; $x < count($ingredients); $x+=1) {
-		
+		if($ingredients[$x] !=''){
 		$ingredient = $ingredients[$x];
 		$quantity = $quant[$x];
-		$measurment = $meas[$x];
+		$measurement = $meas[$x];
 
 		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 		
@@ -70,6 +70,7 @@ try
 		$statement->bindValue(':createdBy',  $userId);
 
 		$statement->execute();
+		}
 	}
 
 	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
