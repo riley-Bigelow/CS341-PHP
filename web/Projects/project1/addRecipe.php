@@ -41,25 +41,54 @@
 						<a href="cookBook.php"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button" style = "background-color: #ffff66"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"   class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
-						<!--<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>-->
 					</div>
 					<div class="display">
 				
 						<ul id="recipeList" class = "results">
-                            <?php
-                                $statement = $db->query('SELECT recipename, recipeid FROM recipes WHERE isplanned');
-                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                                {
-								   echo '<li class="item"'. 'id="'. $row[recipeid].'">' .
-								   			'<a href="details.php?id='.$row[recipeid].'">'.
-											   '<p>'. $row['recipename'] . '</p>'.
-											'</a>'.
-										'</li>';
-                                }
-                            
-                            ?>
+							<div class="container">
+  								<form action="/action_page.php">
+  									<div class="row">
+    									<div class="col-25">
+      										<label for="fname">First Name</label>
+    									</div>
+    									<div class="col-75">
+      									<input type="text" id="fname" name="firstname" placeholder="Your name..">
+    									</div>
+  									</div>
+									<div class="row">
+										<div class="col-25">
+										<label for="lname">Last Name</label>
+										</div>
+										<div class="col-75">
+										<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-25">
+										<label for="country">Country</label>
+										</div>
+										<div class="col-75">
+										<select id="country" name="country">
+											<option value="australia">Australia</option>
+											<option value="canada">Canada</option>
+											<option value="usa">USA</option>
+										</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-25">
+										<label for="subject">Subject</label>
+										</div>
+										<div class="col-75">
+										<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<input type="submit" value="Submit">
+									</div>
+								</form>
+							</div>
 						</ul>
-					
 					</div>			
 				</div>
 			</div>
