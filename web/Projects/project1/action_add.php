@@ -32,7 +32,7 @@ if(isset($_POST['plan'])){
 $userId = 1;
 				
 
-try
+/*try
 {
 	
 
@@ -73,7 +73,7 @@ try
 
 	$query ='INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
 	$statement = $db->prepare($query);
-	
+
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
 	$statement->bindValue(':topicId',  $instructions);
@@ -92,7 +92,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); 
+die(); */
 
 ?>
 
