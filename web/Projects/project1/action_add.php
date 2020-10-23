@@ -63,7 +63,7 @@ try
 		$statement->bindValue(':recipeId', $recipeId);
 		$statement->bindValue(':ingredientName',  $ingredients[$x]);
 		$statement->bindValue(':amount',  $quant[$x]);
-		$statement->bindValue(':measurment',  $measure[$x]);
+		$statement->bindValue(':measurement',  $measure[$x]);
 		$statement->bindValue(':createdAt',  $date);
 		$statement->bindValue(':createdBy',  $userId);
 
