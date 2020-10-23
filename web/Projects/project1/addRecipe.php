@@ -143,6 +143,86 @@
 								</div>
 								<div class="row">
 									<div class="col-25">
+										<label for="recipeName">Ingredient 6:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred6" name="ingred6" placeholder="Ingredient..">
+										<input type="text" id="quant6" name="quant6" placeholder="quantity..">
+										<select id="meas1" name="meas6">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 7:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred7" name="ingred7" placeholder="Ingredient..">
+										<input type="text" id="quant7" name="quant7" placeholder="quantity..">
+										<select id="meas1" name="meas7">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 8:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred8" name="ingred8 placeholder="Ingredient..">
+										<input type="text" id="quant8" name="quant8" placeholder="quantity..">
+										<select id="meas1" name="meas8">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 9:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred9" name="ingred9" placeholder="Ingredient..">
+										<input type="text" id="quant9" name="quant9" placeholder="quantity..">
+										<select id="meas1" name="meas9">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 10:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred10" name="ingred10" placeholder="Ingredient..">
+										<input type="text" id="quant10" name="quant10" placeholder="quantity..">
+										<select id="meas1" name="meas10">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
 									<label for="subject">Instructions:</label>
 									</div>
 									<div class="col-75">
