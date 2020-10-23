@@ -25,14 +25,14 @@ $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $instructions = htmlspecialchars($_POST['intrsuct']);
 $date = date('Y-m-d H:i:s');
-$planned = "False" ;
+$planned = "False";
 if(isset($_POST['plan'])){
 	$planned = "True";
 };
 $userId = 1;
-				
+echo $planned;				
 
-try
+/*try
 {
 	
 
@@ -53,7 +53,7 @@ try
 	// get the new id
 	$recipeId = $db->lastInsertId("recipeId");
 
-	/*for ($x = 0; $x < count($ingredients); $x+=1) {
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();*/
+	$statement->execute();
 
 }
 catch (Exception $ex)
@@ -90,7 +90,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); 
+die(); */
 
 ?>
 
