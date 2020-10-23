@@ -54,16 +54,18 @@ try
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
 	for ($x = 0; $x < count($ingredients); $x+=1) {
-	
-		// Again, first prepare the statement
 		
+		$ingredient = $ingredients[$x];
+		$quantity = $quant[$x];
+		$measurment = $meas[$x];
+
 		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 		
 		// Then, bind the values
 		$statement->bindValue(':recipeId', $recipeId);
-		$statement->bindValue(':ingredientName',  $ingredients[$x]);
-		$statement->bindValue(':amount',  $quant[$x]);
-		$statement->bindValue(':measurement',  $measure[$x]);
+		$statement->bindValue(':ingredientName',  $ingredient);
+		$statement->bindValue(':amount',  $quantity);
+		$statement->bindValue(':measurement',  $measurement);
 		$statement->bindValue(':createdAt',  $date);
 		$statement->bindValue(':createdBy',  $userId);
 
