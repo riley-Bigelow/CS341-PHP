@@ -25,9 +25,9 @@ $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $instructions = htmlspecialchars($_POST['intrsuct']);
 $date = date('Y-m-d H:i:s');
-bool $planned = 0 ;
+$planned = "False" ;
 if(isset($_POST['plan'])){
-	$planned = 1;
+	$planned = "True";
 };
 $userId = 1;
 				
@@ -46,14 +46,14 @@ try
 	$statement->bindValue(':servings', $servings);
 	$statement->bindValue(':createdAt', $date );
 	$statement->bindValue(':createdBy', $userId);
-	$statement->bindValue(':isplanned',$planned );
+	$statement->bindValue(':isPlanned',$planned );
 
 	$statement->execute();
 
 	// get the new id
 	$recipeId = $db->lastInsertId("recipeId");
 
-	/*for ($x = 0; $x < count($ingredients); $x+=1) {
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();*/
+	$statement->execute();
 
 }
 catch (Exception $ex)
