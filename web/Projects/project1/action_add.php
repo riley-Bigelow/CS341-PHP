@@ -23,7 +23,7 @@ $servings = htmlspecialchars($_POST['servings']);
 $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
-$instructions = htmlspecialchars($_POST['instruct']);
+$instructions = htmlspecialchars($_POST['intrsuct']);
 $date = date('Y-m-d H:i:s');
 $planned = "False";
 if(isset($_POST['plan'])){
