@@ -29,7 +29,11 @@ if(isset($_POST['plan'])){
 	$planned = "True";
 };
 				
-
+for ($x = 0; $x <= count($_POST['ingred']); $x++) {
+	echo "The number is: $_POST['ingred'][$x]. <br>";
+	echo "The number is: $_POST['quant'][$x]. <br>";
+	echo "The number is: $_POST['meas'][$x]. <br>";
+  }
 
 
 
@@ -57,10 +61,10 @@ echo $planned."</br>";
 
 /*try
 {
-	// Add the Scripture
+	
 
 	// We do this by preparing the query with placeholder values
-	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy)  VALUES(:recipeName,:servings,:createdAt,:createdBy)';
+	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy,isplanned)  VALUES(:recipeName,:servings,:createdAt,:createdBy,:isplanned)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
@@ -69,6 +73,7 @@ echo $planned."</br>";
 	$statement->bindValue(':servings', $_POST['servings']);
 	$statement->bindValue(':createdAt', $date );
 	$statement->bindValue(':createdBy', 1);
+	$statement->bindValue(':isplanned',$planned );
 
 	$statement->execute();
 
@@ -78,13 +83,11 @@ echo $planned."</br>";
 	// Now go through each topic id in the list from the user's checkboxes
 	foreach ($topicIds as $topicId)
 	{
-		echo "ScriptureId: $scriptureId, topicId: $topicId";
-
 		// Again, first prepare the statement
-		$statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
+		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 
 		// Then, bind the values
-		$statement->bindValue(':scriptureId', $scriptureId);
+		$statement->bindValue(':recipeId', $recipeId);
 		$statement->bindValue(':topicId', $topicId);
 
 		$statement->execute();
