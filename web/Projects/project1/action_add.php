@@ -23,6 +23,7 @@ $servings = htmlspecialchars($_POST['servings']);
 $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
+$date = date('Y-m-d H:i:s');
 
 
 echo $_POST['recipeName']."</br>";
@@ -47,15 +48,14 @@ try
 	// Add the Scripture
 
 	// We do this by preparing the query with placeholder values
-	$query = 'INSERT INTO recipes (recipeId,recipeName,servings,createdAt,createdBy)  VALUES(:recipeId,:recipeName,:servings,:createdAt,:createdBy)';
+	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy)  VALUES(:recipeName,:servings,:createdAt,:createdBy)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':recipeId', DEFAULT);
 	$statement->bindValue(':recipeName', $_POST['recipeName']);
 	$statement->bindValue(':servings', $_POST['servings']);
-	$statement->bindValue(':createdAt', Now());
+	$statement->bindValue(':createdAt', $date );
 	$statement->bindValue(':createdBy', 1);
 
 	$statement->execute();
