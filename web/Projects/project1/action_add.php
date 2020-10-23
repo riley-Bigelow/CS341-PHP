@@ -30,7 +30,7 @@ if(isset($_POST['plan'])){
 	$planned = "True";
 };
 $userId = 1;
-echo $planned;				
+echo $_POST['plan'] ;				
 
 /*try
 {
