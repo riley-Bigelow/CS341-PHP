@@ -62,7 +62,7 @@ try
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
 	for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
-		if($_POST['ingred'][$x] !=''){
+		if($_POST['ingred'][$x] !=""){
 			$ingredient = $_POST['ingred'][$x];
 			$quantity = $_POST['quant'][$x];
 			$measurement = $_Post['meas'][$x];
@@ -73,7 +73,7 @@ try
 			$statement->bindValue(':recipeId', $recipeId);
 			$statement->bindValue(':ingredientName',  $ingredient);
 			$statement->bindValue(':amount',  $quantity);
-			$statement->bindValue(':measurement',  $measurement);
+			$statement->bindValue(':measurement',  $_Post['meas'][$x]);
 			$statement->bindValue(':createdAt',  $date);
 			$statement->bindValue(':createdBy',  $userId);
 
