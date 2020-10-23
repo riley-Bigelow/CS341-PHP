@@ -15,9 +15,9 @@
 // get the data from the POST
 $recipeName = $_POST['txtBook'];
 $servings = $_POST['servings'];
-$ingredients = $_POST['ingred[]'];
-$quant = $_POST['quant[]'];
-$measure = $_POST['meas[]'];
+$ingredients = $_POST['ingred'];
+$quant = $_POST['quant'];
+$measure = $_POST['meas'];
 
 
 
