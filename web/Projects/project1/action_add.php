@@ -24,7 +24,7 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $date = date('Y-m-d H:i:s');
-$planned = htmlspecialchars($_POST['plan']);
+$planned = $_POST['plan'];
 
 
 echo $_POST['recipeName']."</br>";
@@ -39,7 +39,7 @@ foreach($_POST['meas'] as $selected){
 	echo $selected."</br>";
 };
 echo $_POST['intrsuct']."</br>";
-echo $planned.
+echo $planned;
 
 
 
