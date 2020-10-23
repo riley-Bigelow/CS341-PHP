@@ -32,7 +32,7 @@ if(isset($_POST['plan'])){
 $userId = 1;
 				
 
-/*try
+try
 {
 	
 
@@ -56,29 +56,27 @@ $userId = 1;
 	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
+		
+		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 
-		$query ='INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)';
-		$statement = $db->prepare($query);
-	
 		// Then, bind the values
 		$statement->bindValue(':recipeId', $recipeId);
-		$statement->bindValue(':topicId',  $ingredients[$x]);
-		$statement->bindValue(':topicId',  $quant[$x]);
-		$statement->bindValue(':topicId',  $measure[$x]);
-		$statement->bindValue(':topicId',  $date);
-		$statement->bindValue(':topicId',  $userId);
+		$statement->bindValue(':ingredientName',  $ingredients[$x]);
+		$statement->bindValue(':amount',  $quant[$x]);
+		$statement->bindValue(':measurment',  $measure[$x]);
+		$statement->bindValue(':createdAt',  $date);
+		$statement->bindValue(':createdBy',  $userId);
 
 		$statement->execute();
 	}
 
-	$query ='INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
-	$statement = $db->prepare($query);
+	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
 
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
-	$statement->bindValue(':topicId',  $instructions);
-	$statement->bindValue(':topicId',  $date);
-	$statement->bindValue(':topicId',  $userId);
+	$statement->bindValue(':instructions',  $instructions);
+	$statement->bindValue(':createdAt',  $date);
+	$statement->bindValue(':createdBy',  $userId);
 
 	$statement->execute();
 
@@ -92,7 +90,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); */
+die(); 
 
 ?>
 
