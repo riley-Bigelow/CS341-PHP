@@ -23,43 +23,16 @@ $servings = htmlspecialchars($_POST['servings']);
 $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
+$instructions = htmlspecialchars($_POST['instruct']);
 $date = date('Y-m-d H:i:s');
 $planned = "False";
 if(isset($_POST['plan'])){
 	$planned = "True";
 };
+$userId = 1;
 				
-for ($x = 0; $x < count($ingredients); $x+=1) {
-	echo "The number is: $ingredients[$x]. <br>";
-	echo "The number is: $quant[$x]. <br>";
-	echo "The number is: $measure[$x]. <br>";
-  };
 
-
-
-echo $_POST['recipeName']."</br>";
-echo $_POST['servings']."</br>";
-foreach($_POST['ingred'] as $selected){
-    echo $selected."</br>";
-    };
-foreach($_POST['quant'] as $selected){
-    echo $selected."</br>";
-	};
-foreach($_POST['meas'] as $selected){
-	echo $selected."</br>";
-};
-echo $_POST['intrsuct']."</br>";
-
-echo $date."</br>";
-echo $planned."</br>";
-
-
-
-
-
-
-
-/*try
+try
 {
 	
 
@@ -69,10 +42,10 @@ echo $planned."</br>";
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':recipeName', $_POST['recipeName']);
-	$statement->bindValue(':servings', $_POST['servings']);
+	$statement->bindValue(':recipeName', $recipeName);
+	$statement->bindValue(':servings', $servings);
 	$statement->bindValue(':createdAt', $date );
-	$statement->bindValue(':createdBy', 1);
+	$statement->bindValue(':createdBy', $userId);
 	$statement->bindValue(':isplanned',$planned );
 
 	$statement->execute();
@@ -80,18 +53,32 @@ echo $planned."</br>";
 	// get the new id
 	$recipeId = $db->lastInsertId("recipeid");
 
-	// Now go through each topic id in the list from the user's checkboxes
-	foreach ($topicIds as $topicId)
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 
 		// Then, bind the values
 		$statement->bindValue(':recipeId', $recipeId);
-		$statement->bindValue(':topicId', $topicId);
+		$statement->bindValue(':topicId',  $ingredients[$x]);
+		$statement->bindValue(':topicId',  $quant[$x]);
+		$statement->bindValue(':topicId',  $measure[$x]);
+		$statement->bindValue(':topicId',  $date);
+		$statement->bindValue(':topicId',  $userId);
 
 		$statement->execute();
 	}
+
+	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
+
+	// Then, bind the values
+	$statement->bindValue(':recipeId', $recipeId);
+	$statement->bindValue(':topicId',  $instructions);
+	$statement->bindValue(':topicId',  $date);
+	$statement->bindValue(':topicId',  $userId);
+
+	$statement->execute();
+
 }
 catch (Exception $ex)
 {
