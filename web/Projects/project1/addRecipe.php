@@ -33,7 +33,6 @@
 				<div class ="content">
 					<div class="mheader" id = "home"> 
 						<div class= "title">
-
 							<h4>Add Recipe</h4>
 						</div>
 					</div>
