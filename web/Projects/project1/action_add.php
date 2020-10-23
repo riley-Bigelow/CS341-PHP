@@ -33,8 +33,8 @@ $userId = 1;
 for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	if($_POST['ingred'][$x] !=''){
 		echo $_POST['ingred'][$x].'<br>';
-		echo $_POST['quant'][$x].'<br>'
-		echo $_POST['meas'][$x].'<br>'
+		echo $_POST['quant'][$x].'<br>';
+		echo $_POST['meas'][$x].'<br>';
 	}
 }
 
