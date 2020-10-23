@@ -43,7 +43,6 @@
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>		
 						<a href="addRecipe.php" class="button" id='add' style = "background-color: #ffff66"><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
 					</div>
-					<div class="display">
 						<div class="container">
 							<form action="/action_page.php">
 								<div class="row">
@@ -86,8 +85,7 @@
 									<input type="submit" value="Submit">
 								</div>
 							</form>
-						</div>
-					</div>			
+						</div>			
 				</div>
 			</div>
 		</div>
