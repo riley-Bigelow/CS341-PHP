@@ -27,6 +27,8 @@ $date = date('Y-m-d H:i:s');
 $planned = $_POST['plan'];
 
 
+
+
 echo $_POST['recipeName']."</br>";
 echo $_POST['servings']."</br>";
 foreach($_POST['ingred'] as $selected){
@@ -42,6 +44,8 @@ echo $_POST['intrsuct']."</br>";
 
 echo $date."</br>";
 echo $planned."</br>";
+
+echo isset($_POST['plan']).;
 
 
 
