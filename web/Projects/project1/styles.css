@@ -167,7 +167,7 @@ a.button:hover {
   width: auto;
   border: solid  black;
       width:auto;
-    height: auto;
+    height: 500px;
     max-height:1000px;
     background-color: #FFF;
     overflow: auto;
@@ -177,32 +177,8 @@ a.button:hover {
     padding:0;
     margin:0;
 }
-/* The complete */
-.complete {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-   margin-left: 5px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/* Hide the browser's default checkbox */
-.complete input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-img {
-  max-width: 100%;
-}
+
 .results {
   padding: 0;
   margin: 1em 0;
