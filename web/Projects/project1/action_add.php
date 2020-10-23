@@ -57,8 +57,8 @@ try
 	{
 		// Again, first prepare the statement
 		
-		$query = 'INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)';
-		$statement = $db->prepare($query);
+		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
+		
 		// Then, bind the values
 		$statement->bindValue(':recipeId', $recipeId);
 		$statement->bindValue(':ingredientName',  $ingredients[$x]);
@@ -70,8 +70,8 @@ try
 		$statement->execute();
 	}
 
-	$query = 'INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
-	$statement = $db->prepare($query);
+	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
+	
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
 	$statement->bindValue(':instructions',  $instructions);
