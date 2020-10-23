@@ -34,13 +34,14 @@
 					<div class="mheader" id = "home"> 
 						<div class= "title">
 
-							<h4>My Mealplan</h4>
+							<h4>Add Recipe</h4>
 						</div>
 					</div>
 					<div class="topnav">
 						<a href="cookBook.php"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
-						<a href="mealPlan.php" id ="mealplan"  class="button" style = "background-color: #ffff66"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
+						<a href="mealPlan.php" id ="mealplan"  class="button" style="width:42px;height:42px"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"   class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
+						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style = "background-color: #ffff66;"><br>Add Recipe</a>
 					</div>
 					<div class="display">
 				
