@@ -28,11 +28,15 @@ $date = date('Y-m-d H:i:s');
 $planned = "False";
 if(isset($_POST['plan'])){
 	$planned = "True";
-};
+}
 $userId = 1;
+for ($x = 0; $x < count($ingredients); $x+=1) {
+	if($ingredients[$x] !=''){
+		echo $ingredients[$x];
+	}
+}
 
-
-try
+/*try
 {
 	
 
@@ -92,7 +96,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); 
+die(); */
 
 ?>
 
