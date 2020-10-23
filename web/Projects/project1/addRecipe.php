@@ -43,7 +43,7 @@
 						<a href="addRecipe.php" class="button" id='add' style = "background-color: #ffff66"><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
 					</div>
 						<div class="container">
-							<form action="action_add.php">
+							<form action="action_add.php" method="post">
 								<div class="row">
 									<div class="col-25">
 										<label for="recipeName">Recipe Name:</label>
@@ -149,7 +149,7 @@
 									<textarea id="subject" name="subject" placeholder="Instructions.." style="height:200px" required></textarea>
 									</div>
 								</div>
-								<div class="row">
+								<div class="topnav">
 									<input type="submit" value="Add Recipe">
 									<input type="reset" value="Clear">
 								</div>
