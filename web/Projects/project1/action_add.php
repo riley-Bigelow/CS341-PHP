@@ -37,7 +37,7 @@ try
 	
 
 	// We do this by preparing the query with placeholder values
-	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy,isplanned)  VALUES(:recipeName,:servings,:createdAt,:createdBy,:isplanned)';
+	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy,isPlanned)  VALUES(:recipeName,:servings,:createdAt,:createdBy,:isPlanned)';
 	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
@@ -51,9 +51,9 @@ try
 	$statement->execute();
 
 	// get the new id
-	$recipeId = $db->lastInsertId("recipeid");
+	$recipeId = $db->lastInsertId("recipeId");
 
-	/*for ($x = 0; $x < count($ingredients); $x+=1) {
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();*/
+	$statement->execute();
 
 }
 catch (Exception $ex)
