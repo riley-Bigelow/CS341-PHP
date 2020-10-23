@@ -56,8 +56,10 @@ try
 	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
-		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 
+		$query ='INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)';
+		$statement = $db->prepare($query);
+	
 		// Then, bind the values
 		$statement->bindValue(':recipeId', $recipeId);
 		$statement->bindValue(':topicId',  $ingredients[$x]);
@@ -69,8 +71,9 @@ try
 		$statement->execute();
 	}
 
-	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
-
+	$query ='INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
+	$statement = $db->prepare($query);
+	
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
 	$statement->bindValue(':topicId',  $instructions);
