@@ -24,7 +24,7 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $date = date('Y-m-d H:i:s');
-$planned = "False"
+$planned = "False";
 if(isset($_POST['plan'])){
 	$planned = "True";
 };
