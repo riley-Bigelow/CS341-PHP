@@ -28,13 +28,13 @@ $date = date('Y-m-d H:i:s');
 $planned = "False";
 if(isset($_POST['plan'])){
 	$planned = "True";
-};
+}
 $userId = 1;
-for ($x = 0; $x < count($ingredients); $x+=1) {
-	if($ingredients[$x] !=''){
-		echo $ingredients[$x];
+for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
+	if($_POST['ingred'][$x] !=''){
+		echo $_POST['ingred'][$x];
 	}
-};
+}
 
 /*try
 {
