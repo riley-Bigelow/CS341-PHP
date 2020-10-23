@@ -36,7 +36,7 @@ for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	}
 }
 
-/*try
+try
 {
 	
 
@@ -57,11 +57,11 @@ for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	// get the new id
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
-	for ($x = 0; $x < count($ingredients); $x+=1) {
-		if($ingredients[$x] !=''){
-		$ingredient = $ingredients[$x];
-		$quantity = $quant[$x];
-		$measurement = $meas[$x];
+	for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
+		if($_POST['ingred'][$x] !=''){
+		$ingredient = $_POST['ingred'][$x];
+		$quantity = $_Post['quant'][$x];
+		$measurement = $_Post['meas'][$x];
 
 		$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 		
