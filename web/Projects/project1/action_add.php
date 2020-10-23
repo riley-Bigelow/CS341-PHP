@@ -39,7 +39,6 @@ foreach($_POST['meas'] as $selected){
 	echo $selected."</br>";
 };
 echo $_POST['intrsuct']."</br>";
-echo isset($_POST['plan'])."</br>";
 echo $planned.
 
 
