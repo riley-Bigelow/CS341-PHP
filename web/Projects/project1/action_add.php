@@ -33,7 +33,7 @@ $userId = 1;
 
 echo $planned;
 
-/*try
+try
 {
 	
 
@@ -91,7 +91,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); */
+die(); 
 
 ?>
 
