@@ -70,7 +70,7 @@ try
 		$statement->execute();
 	}
 
-	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
+	/*$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
 	
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();
+	$statement->execute();*/
 
 }
 catch (Exception $ex)
