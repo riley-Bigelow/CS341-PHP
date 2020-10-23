@@ -43,7 +43,7 @@
 						<a href="addRecipe.php" class="button" id='add' style = "background-color: #ffff66"><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
 					</div>
 						<div class="container">
-							<form action="action_add.php" method="post">
+							<form action="action_add.php" method="post" id='addItem'>
 								<div class="row">
 									<div class="col-25">
 										<label for="recipeName">Recipe Name:</label>

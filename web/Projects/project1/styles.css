@@ -335,7 +335,7 @@ a.button:hover {
 .row{
   text-align: left;
 }
-form input[type=text], select, textarea {
+#addItem input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -348,7 +348,7 @@ label {
   display: inline-block;
 }
 
-input[type=submit] {
+#addItem input[type=submit] {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -358,11 +358,11 @@ input[type=submit] {
   float: right;
 }
 
-form input[type=submit]:hover {
+#addItem input[type=submit]:hover {
   background-color: #45a049;
 }
 
-form input[type=reset] {
+#addItem input[type=reset] {
   background-color: red;
   color: white;
   padding: 12px 20px;

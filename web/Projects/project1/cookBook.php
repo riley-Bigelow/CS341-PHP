@@ -42,7 +42,7 @@
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
 						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
 						<div class="search-container">
-							<form action="search.php" method="POST">
+							<form action="search.php" method="POST" id='searchItem'>
 								 <input type="text" id='search' placeholder="Search for a recipe.." name="search" required>
 								  <button id="searchBtn">Search</button>
 							</form>
