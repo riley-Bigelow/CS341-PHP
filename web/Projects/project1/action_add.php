@@ -51,9 +51,9 @@ try
 	$statement->execute();
 
 	// get the new id
-	$recipeId = $db->lastInsertId("recipes_id_seq");
+	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
-	/*for ($x = 0; $x < count($ingredients); $x+=1) {
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();*/
+	$statement->execute();
 
 }
 catch (Exception $ex)
