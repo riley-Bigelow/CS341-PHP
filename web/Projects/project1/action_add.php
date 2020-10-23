@@ -29,11 +29,11 @@ if(isset($_POST['plan'])){
 	$planned = "True";
 };
 				
-for ($x = 0; $x <= count($_POST['ingred']); $x++) {
-	echo "The number is: $_POST['ingred'][$x]. <br>";
-	echo "The number is: $_POST['quant'][$x]. <br>";
-	echo "The number is: $_POST['meas'][$x]. <br>";
-  }
+for ($x = 0; $x <= count($ingredients); $x++) {
+	echo "The number is: $ingredients['ingred'][$x]. <br>";
+	echo "The number is: $quant['quant'][$x]. <br>";
+	echo "The number is: $measure['meas'][$x]. <br>";
+  };
 
 
 
