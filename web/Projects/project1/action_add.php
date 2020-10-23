@@ -13,17 +13,17 @@
 ***********************************************************/
 
 // get the data from the POST
-$recipeName = $_POST['txtBook'];
-$servings = $_POST['servings'];
-$ingredients = $_POST['ingred'];
-$quant = $_POST['quant'];
-$measure = $_POST['meas'];
+$recipeName = htmlspecialchars($_POST['recipeName']);
+$servings = htmlspecialchars($_POST['servings']);
+$ingredients = htmlspecialchars($_POST['ingred']);
+$quant = htmlspecialchars($_POST['quant']);
+$measure = htmlspecialchars($_POST['meas']);
 
 
 
  ;
- foreach($_POST['ingred'] as $selected){
-    echo $selected."</br>";
+ foreach($ingredients as $ingredient){
+    echo $ingredient.".</br>";
     }
 
 
