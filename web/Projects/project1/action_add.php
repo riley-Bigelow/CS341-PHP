@@ -54,7 +54,7 @@ try
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
 	for ($x = 0; $x < count($ingredients); $x+=1) {
-	{
+	
 		// Again, first prepare the statement
 		
 		$statement = $db->prepare'INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
@@ -70,7 +70,7 @@ try
 		$statement->execute();
 	}
 
-	/*$query = 'INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
+	$query = 'INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
 	$statement = $db->prepare($query);
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
@@ -78,7 +78,7 @@ try
 	$statement->bindValue(':createdAt',  $date);
 	$statement->bindValue(':createdBy',  $userId);
 
-	$statement->execute();*/
+	$statement->execute();
 
 }
 catch (Exception $ex)
