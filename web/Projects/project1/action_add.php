@@ -31,7 +31,7 @@ if(isset($_POST['plan'])){
 };
 $userId = 1;
 
-echo $planned.;
+echo $planned;
 
 /*try
 {
