@@ -65,10 +65,7 @@
 									<label for="servings">Add to Planner:</label>
 									</div>
 									<div class="col-75">
-										<label class="chkcontainer">
-											<input type="checkbox" value="True" name="plan">
-											<span class="checkmark"></span>
-										</label>
+										<input type="checkbox" value="True" name="plan">
 									</div>
 								</div>
 								<div class="row">
