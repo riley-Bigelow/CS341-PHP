@@ -76,11 +76,11 @@
 										<input type="text" id="ingred1" name="ingred[]" placeholder="Ingredient.." required>
 										<input type="text" id="quant1" name="quant[]" placeholder="quantity.." required>
 										<select id="meas1" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
@@ -92,11 +92,10 @@
 										<input type="text" id="ingred2" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant2" name="quant[]" placeholder="quantity..">
 										<select id="meas2" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup(s)</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
 											<option value="Oz">Oz</option>
 										</select>
 									</div>
@@ -109,11 +108,11 @@
 										<input type="text" id="ingred3" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant3" name="quant[]" placeholder="quantity..">
 										<select id="meas3" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
@@ -125,11 +124,11 @@
 										<input type="text" id="ingred4" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant4" name="quant[]" placeholder="quantity..">
 										<select id="meas4" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
@@ -141,11 +140,11 @@
 										<input type="text" id="ingred5" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant5" name="quant[]" placeholder="quantity..">
 										<select id="meas5" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
 											<option value="tsp">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
@@ -157,11 +156,11 @@
 										<input type="text" id="ingred6" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant6" name="quant[]" placeholder="quantity..">
 										<select id="meas6" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
@@ -173,11 +172,11 @@
 										<input type="text" id="ingred7" name="ingred[]" placeholder="Ingredient..">
 										<input type="text" id="quant7" name="quant[]" placeholder="quantity..">
 										<select id="meas7" name="meas[]">
-											<option value=" "> </option>
-											<option value="Cup">Cup</option>
+											<option value="Cup(s)">Cup(s)</option>
 											<option value="Tsb">Tsb</option>
 											<option value="tsp">tsp</option>
-											<option value="tsp">Lbs</option>
+											<option value="Lbs">Lbs</option>
+											<option value="Oz">Oz</option>
 										</select>
 									</div>
 								</div>
