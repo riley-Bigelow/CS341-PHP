@@ -46,42 +46,111 @@
 							<form action="/action_page.php">
 								<div class="row">
 									<div class="col-25">
-										<label for="fname">First Name</label>
+										<label for="recipeName">Recipe Name:</label>
 									</div>
 									<div class="col-75">
-									<input type="text" id="fname" name="firstname" placeholder="Your name..">
+									<input type="text" id="recipeName" name="recipeName" placeholder="Recipe name.." required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-25">
-									<label for="lname">Last Name</label>
+									<label for="servings">Servings:</label>
 									</div>
 									<div class="col-75">
-									<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+									<input type="number" id="servings" name="servings" required min="1">
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-25">
-									<label for="country">Country</label>
+										<label for="recipeName">Ingredient 1:</label>
 									</div>
 									<div class="col-75">
-									<select id="country" name="country">
-										<option value="australia">Australia</option>
-										<option value="canada">Canada</option>
-										<option value="usa">USA</option>
-									</select>
+										<input type="text" id="ingred1" name="ingred1" placeholder="Ingredient.." required>
+										<input type="text" id="quant1" name="quant1" placeholder="quantity.." required>
+										<select id="meas1" name="meas1">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-25">
-									<label for="subject">Subject</label>
+										<label for="recipeName">Ingredient 2:</label>
 									</div>
 									<div class="col-75">
-									<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+										<input type="text" id="ingred2" name="ingred2" placeholder="Ingredient..">
+										<input type="text" id="quant2" name="quant2" placeholder="quantity..">
+										<select id="meas1" name="meas2">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
 									</div>
 								</div>
 								<div class="row">
-									<input type="submit" value="Submit">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 3:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred3" name="ingred3" placeholder="Ingredient..">
+										<input type="text" id="quant3" name="quant3" placeholder="quantity..">
+										<select id="meas1" name="meas3">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 4:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred4" name="ingred4" placeholder="Ingredient..">
+										<input type="text" id="quant4" name="quant4" placeholder="quantity..">
+										<select id="meas1" name="meas4">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+										<label for="recipeName">Ingredient 5:</label>
+									</div>
+									<div class="col-75">
+										<input type="text" id="ingred5" name="ingred5" placeholder="Ingredient..">
+										<input type="text" id="quant5" name="quant5" placeholder="quantity..">
+										<select id="meas1" name="meas5">
+											<option value=" "> </option>
+											<option value="Cup">Cup</option>
+											<option value="Tsb">Tsb</option>
+											<option value="tsp">tsp</option>
+											<option value="tsp">Lbs</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
+									<label for="subject">Instructions:</label>
+									</div>
+									<div class="col-75">
+									<textarea id="subject" name="subject" placeholder="Instructions.." style="height:200px" required></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<input type="submit" value="Add Recipe">
+									<input type="reset" value="Clear">
 								</div>
 							</form>
 						</div>			
