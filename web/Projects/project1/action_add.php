@@ -53,7 +53,7 @@ try
 	// get the new id
 	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
 
-	/*for ($x = 0; $x < count($ingredients); $x+=1) {
+	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
 		// Again, first prepare the statement
 		
@@ -70,7 +70,7 @@ try
 		$statement->execute();
 	}
 
-	$query = 'INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
+	/*$query = 'INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)';
 	$statement = $db->prepare($query);
 	// Then, bind the values
 	$statement->bindValue(':recipeId', $recipeId);
