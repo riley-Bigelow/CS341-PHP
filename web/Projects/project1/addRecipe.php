@@ -175,10 +175,10 @@
 								</div>
 								<div class="row">
 									<div class="col-25">
-									<label for="subject">Instructions:</label>
+									<label for="intrsuct">Instructions:</label>
 									</div>
 									<div class="col-75">
-									<textarea id="subject" name="subject" placeholder="Instructions.." style="height:200px" required></textarea>
+									<textarea id="intrsuct" name="intrsuct" placeholder="Instructions.." style="height:200px" required></textarea>
 									</div>
 								</div>
 								<div class="topnav">

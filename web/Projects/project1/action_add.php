@@ -1,16 +1,21 @@
 <?php
-/**********************************************************
-* File: insertTopic.php
-* Author: Br. Burton
-* 
-* Description: Takes input posted from topicEntry.php
-*   This file enters a new scripture into the database
-*   along with its associated topics.
-*
-*   This file does NOT do any rendering at all,
-*   instead it redirects the user to showTopics.php to see
-*   the resulting list.
-***********************************************************/
+ try
+ {
+	 $dbUrl = getenv('DATABASE_URL');       
+	 $dbOpts = parse_url($dbUrl);         
+	 $dbHost = $dbOpts["host"];
+	 $dbPort = $dbOpts["port"];
+	 $dbUser = $dbOpts["user"];
+	 $dbPassword = $dbOpts["pass"];
+	 $dbName = ltrim($dbOpts["path"],'/');
+	 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+ }
+ catch (PDOException $ex)
+ {
+	 echo 'Error!: ' . $ex->getMessage();
+	 die();
+ }
 
 // get the data from the POST
 $recipeName = htmlspecialchars($_POST['recipeName']);
@@ -19,21 +24,24 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 
+echo $_POST['recipeName']."</br>";
+echo $_POST['servings']."</br>";
+foreach($_POST['ingred'] as $selected){
+    echo $selected."</br>";
+    };
+foreach($_POST['quant'] as $selected){
+    echo $selected."</br>";
+	};
+foreach($_POST['meas'] as $selected){
+	echo $selected."</br>";
+};
+echo $_POST['intrsuct']."</br>";
 
 
- ;
- foreach($ingredients as $ingredient){
-    echo $ingredient.".</br>";
-    }
 
 
-// we could (and should!) put additional checks here to verify that all this data is actually provided
 
-
-/*require("dbConnect.php");
-$db = get_db();
-
-try
+/*try
 {
 	// Add the Scripture
 
