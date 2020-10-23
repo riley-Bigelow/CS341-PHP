@@ -15,9 +15,9 @@
 // get the data from the POST
 $recipeName = htmlspecialchars($_POST['recipeName']);
 $servings = htmlspecialchars($_POST['servings']);
-$ingredients[] = htmlspecialchars($_POST['ingred']);
-$quant[] = htmlspecialchars($_POST['quant']);
-$measure[] = htmlspecialchars($_POST['meas']);
+$ingredients = htmlspecialchars($_POST['ingred']);
+$quant = htmlspecialchars($_POST['quant']);
+$measure = htmlspecialchars($_POST['meas']);
 
 
 
