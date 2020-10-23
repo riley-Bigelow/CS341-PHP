@@ -21,10 +21,11 @@ $measure = $_POST['meas'];
 
 
 
- echo "book=$recipeName\n";
- echo "chapter=$ingredients\n";
-echo "verse=$quant\n";
-echo "content=$measure\n";
+ ;
+ foreach($_POST['ingred'] as $selected){
+    echo $selected."</br>";
+    }
+
 
 // we could (and should!) put additional checks here to verify that all this data is actually provided
 
