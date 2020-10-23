@@ -66,7 +66,7 @@
 									</div>
 									<div class="col-75">
 										<label class="chkcontainer">
-											<input type="checkbox" value="True" id="plan">
+											<input type="checkbox" value="True" name="plan">
 											<span class="checkmark"></span>
 										</label>
 									</div>
