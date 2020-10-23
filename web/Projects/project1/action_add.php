@@ -24,6 +24,7 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 
+
 echo $_POST['recipeName']."</br>";
 echo $_POST['servings']."</br>";
 foreach($_POST['ingred'] as $selected){
@@ -41,27 +42,28 @@ echo $_POST['intrsuct']."</br>";
 
 
 
-/*try
+try
 {
 	// Add the Scripture
 
 	// We do this by preparing the query with placeholder values
-//	$query = 'INSERT INTO scripture(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
-//	$statement = $db->prepare($query);
+	$query = 'INSERT INTO recipes (recipeId,recipeName,servings,createdAt,createdBy)  VALUES(:recipeId,:recipeName,:servings,:createdAt,:createdBy)';
+	$statement = $db->prepare($query);
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':book', $book);
-	$statement->bindValue(':chapter', $chapter);
-	$statement->bindValue(':verse', $verse);
-	$statement->bindValue(':content', $content);
+	$statement->bindValue(':recipeId', DEFAULT);
+	$statement->bindValue(':recipeName', $_POST['recipeName']);
+	$statement->bindValue(':servings', $_POST['servings']);
+	$statement->bindValue(':createdAt', Now());
+	$statement->bindValue(':createdBy', 1);
 
 	$statement->execute();
 
 	// get the new id
-	$scriptureId = $db->lastInsertId("scripture_id_seq");
+	$recipeId = $db->lastInsertId("recipeid");
 
-	// Now go through each topic id in the list from the user's checkboxes
+	/*// Now go through each topic id in the list from the user's checkboxes
 	foreach ($topicIds as $topicId)
 	{
 		echo "ScriptureId: $scriptureId, topicId: $topicId";
@@ -74,7 +76,7 @@ echo $_POST['intrsuct']."</br>";
 		$statement->bindValue(':topicId', $topicId);
 
 		$statement->execute();
-	}
+	}*/
 }
 catch (Exception $ex)
 {
@@ -85,7 +87,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: cookBook.php");
 
-die(); */
+die(); 
 
 ?>
 
