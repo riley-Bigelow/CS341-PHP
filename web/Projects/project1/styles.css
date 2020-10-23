@@ -335,7 +335,7 @@ a.button:hover {
 .row{
   text-align: left;
 }
-input[type=text], select, textarea {
+form input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -358,11 +358,11 @@ input[type=submit] {
   float: right;
 }
 
-input[type=submit]:hover {
+form input[type=submit]:hover {
   background-color: #45a049;
 }
 
-input[type=reset] {
+form input[type=reset] {
   background-color: red;
   color: white;
   padding: 12px 20px;
@@ -372,7 +372,7 @@ input[type=reset] {
   float: right;
 }
 
-input[type=reset]:hover {
+form input[type=reset]:hover {
   background-color: rgb(238, 74, 74);
 }
 
