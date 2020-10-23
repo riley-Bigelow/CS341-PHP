@@ -62,6 +62,17 @@
 								</div>
 								<div class="row">
 									<div class="col-25">
+									<label for="servings">Add to Planner:</label>
+									</div>
+									<div class="col-75">
+										<label class="chkcontainer">
+											<input type="checkbox" value="True" id="plan">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-25">
 										<label for="recipeName">Ingredient 1:</label>
 									</div>
 									<div class="col-75">

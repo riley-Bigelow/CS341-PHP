@@ -24,6 +24,7 @@ $ingredients = htmlspecialchars($_POST['ingred']);
 $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $date = date('Y-m-d H:i:s');
+$planned = htmlspecialchars($_POST['plan']);
 
 
 echo $_POST['recipeName']."</br>";
@@ -38,12 +39,14 @@ foreach($_POST['meas'] as $selected){
 	echo $selected."</br>";
 };
 echo $_POST['intrsuct']."</br>";
+echo isset($_POST['plan'])."</br>";
+echo $planned.
 
 
 
 
 
-try
+/*try
 {
 	// Add the Scripture
 
@@ -63,7 +66,7 @@ try
 	// get the new id
 	$recipeId = $db->lastInsertId("recipeid");
 
-	/*// Now go through each topic id in the list from the user's checkboxes
+	// Now go through each topic id in the list from the user's checkboxes
 	foreach ($topicIds as $topicId)
 	{
 		echo "ScriptureId: $scriptureId, topicId: $topicId";
