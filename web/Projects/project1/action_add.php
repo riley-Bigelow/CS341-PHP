@@ -25,9 +25,9 @@ $quant = htmlspecialchars($_POST['quant']);
 $measure = htmlspecialchars($_POST['meas']);
 $instructions = htmlspecialchars($_POST['intrsuct']);
 $date = date('Y-m-d H:i:s');
-$planned = "False";
+bool $planned = 0 ;
 if(isset($_POST['plan'])){
-	$planned = "True";
+	$planned = 1;
 };
 $userId = 1;
 				
