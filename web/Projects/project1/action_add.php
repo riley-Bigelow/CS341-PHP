@@ -52,7 +52,7 @@ try
 	$statement->execute();
 
 	// get the new id
-	$recipeId = $db->lastInsertId("recipeId");
+	$recipeId = $db->lastInsertId("recipes_id_seq");
 
 	for ($x = 0; $x < count($ingredients); $x+=1) {
 	{
