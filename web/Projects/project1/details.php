@@ -42,7 +42,7 @@
 						<a href="cookBook.php"  id="cookbook"  class="button"><img src="cookbook.png" style="width:42px;height:42px;"><br>CookBook</a>
 						<a href="mealPlan.php" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Meal Planner</a>
 						<a href="groceryList.php" id="glist"     class="button"><img src="grocerylist.png" style="width:42px;height:42px;"><br>Grocery List</a>
-						<!--<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>-->
+						<a href="addRecipe.php" class="button" id='add'><img src="addrecipe.png" style="width:42px;height:42px;"><br>Add Recipe</a>
 					</div>
 					<div class="display">
 						<ul id="recipeList" class = "results">
@@ -85,6 +85,10 @@
                            			 ?>
 									</ul>
 								</div>
+								<div class= "topnav">
+        							<a href="#home" class="button" id="addMeal"><img src="mealplan.png" style="width:42px;height:42px;"><br>${label}</a>
+       								<a href="#home" class="button" id="remove" name="${this.recipes[index].id}"><img src="trash.png" style="width:42px;height:42px;"><br>Remove</a>
+    							</div>
 							</li>
 						</ul>
 					</div>			
