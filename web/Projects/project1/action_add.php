@@ -63,17 +63,15 @@ try
 
 	for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 		if($_POST['ingred'][$x] !=''){
-			$ingredient = $_POST['ingred'][$x];
-			$quantity = $_POST['quant'][$x];
-			$measurement = $_Post['meas'][$x];
+	
 
 			$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 			
 			// Then, bind the values
 			$statement->bindValue(':recipeId', $recipeId);
-			$statement->bindValue(':ingredientName',  $ingredient);
-			$statement->bindValue(':amount',  $quantity);
-			$statement->bindValue(':measurement',  $measurement);
+			$statement->bindValue(':ingredientName', $_POST['ingred'][$x]);
+			$statement->bindValue(':amount', $_POST['quant'][$x]);
+			$statement->bindValue(':measurement', $_Post['meas'][$x]);
 			$statement->bindValue(':createdAt',  $date);
 			$statement->bindValue(':createdBy',  $userId);
 
