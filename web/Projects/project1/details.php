@@ -106,8 +106,9 @@
 									?>
 									<form action="action_delete" method="Post">
 										<?php
-											'<input type="submit" id="delete-icon" name="'. $row[recipeid] .'" value="Delete Recipe">'
+											echo '<input type="submit" id="delete-icon" name="'. $row[recipeid] .'" value="Delete Recipe">'
 										?>
+									</form>
     							</div>
 							</li>
 						</ul>
