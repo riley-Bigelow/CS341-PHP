@@ -48,7 +48,7 @@
 						<ul id="recipeList" class = "results">
 							<li>
 								<?php 
-										$statement = $db->prepare('SELECT recipename, servings FROM recipes Where deletedat IS NULL AND recipeid = :id');
+										$statement = $db->prepare('SELECT recipename, servings, isplanned FROM recipes Where deletedat IS NULL AND recipeid = :id');
 										$statement->execute(array(':id' => $id));
 										while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 										{
@@ -86,8 +86,24 @@
 									</ul>
 								</div>
 								<div class= "topnav">
-        							<a href="#home" class="button" id="addMeal"><img src="mealplan.png" style="width:42px;height:42px;"><br>${label}</a>
-       								<a href="#home" class="button" id="remove" name="${this.recipes[index].id}"><img src="trash.png" style="width:42px;height:42px;"><br>Remove</a>
+									
+									<?php
+									$statement = $db->prepare('SELECT recipename, servings, isplanned FROM recipes Where deletedat IS NULL AND recipeid = :id');
+									$statement->execute(array(':id' => $id));
+									$row = $statement->fetch(PDO::FETCH_ASSOC);
+									If(!$row['isplanned']){
+										echo '<form action="action_addToMealPlanner.php" method="post">';
+										echo '<input type="submit" id="submit-icon" name="'. $row[recipeid] .'" value="Add To Planner">'.
+										'</form>';
+									}
+									else{
+										echo '<form action="action_removeFromMealPlanner.php" method="post">';
+										echo '<input type="submit" id="submit-icon" name="'. $row[recipeid] .'" value="Remove From Planner">'.
+										'</form>';
+									}
+									
+									?>
+									<a href="#home" class="button" id="remove" name="${this.recipes[index].id}"><img src="trash.png" style="width:42px;height:42px;"><br>Remove</a>
     							</div>
 							</li>
 						</ul>
