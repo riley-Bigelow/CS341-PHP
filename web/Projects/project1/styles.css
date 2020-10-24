@@ -423,7 +423,13 @@ form input[type=reset]:hover {
   width: 42px;
   height: 42px;
   cursor: pointer;
-  color: transparent;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 
