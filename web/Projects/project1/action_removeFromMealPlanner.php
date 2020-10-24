@@ -18,7 +18,8 @@
  }
 
  $id = $_GET['id'];
- $planned = 'T';
+ $planned = 'F';
+ 
  
 echo $planned.'<br>';
 echo $id;
@@ -43,7 +44,7 @@ catch (Exception $ex)
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("Location: details.php?id='$id'");
+header("Location: cookBook.php");
 
 die();
 
