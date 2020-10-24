@@ -30,11 +30,11 @@ if(isset($_POST['plan'])){
 	$planned = "True";
 }
 $userId = 1;
-for ($x = 0; $x < count($_POST['meas']); $x+=1) {
+for ($x = 0; $x < count($measure); $x+=1) {
 	//if($_POST['meas'][$x] !=''){
 	//	echo $_POST['ingred'][$x].'<br>';
 	//	echo $_POST['quant'][$x].'<br>';
-		echo $_POST['meas'][$x].'<br>';
+		echo $measure[$x].'<br>';
 	//}
 }
 
@@ -65,7 +65,7 @@ try
 		if($_POST['ingred'][$x] !=""){
 			echo 'current insert'.$ingredient = $_POST['ingred'][$x].'<br>';
 			echo $quantity = $_POST['quant'][$x].'<br>';
-			echo $measurement = $_Post['meas'][$x].'<br>';
+			echo $measurement = $measure[$x].'<br>';
 
 			$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
 			
