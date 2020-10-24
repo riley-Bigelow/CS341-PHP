@@ -44,7 +44,7 @@ catch (Exception $ex)
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("Location: mealPlanner.php");
+header("Location: mealPlan.php");
 
 die();
 
