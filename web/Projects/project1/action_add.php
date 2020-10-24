@@ -34,7 +34,7 @@ for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	if($_POST['ingred'][$x] !=""){
 		echo 'current insert'.$ingredient = $_POST['ingred'][$x].'<br>';
 		echo $quantity = $_POST['quant'][$x].'<br>';
-		echo $measurement = $measure[$x].'<br>';
+		echo $measurement =$_POST['meas'][$x].'<br>';
 	}
 }
 
