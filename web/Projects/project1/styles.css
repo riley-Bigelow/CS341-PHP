@@ -416,8 +416,15 @@ form input[type=reset]:hover {
   }
 }
 
-
-
+#submit-icon {
+  background-image: url("mealplan.png");
+  background-size: cover;
+  border: none;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  color: transparent;
+}
 
 
 
