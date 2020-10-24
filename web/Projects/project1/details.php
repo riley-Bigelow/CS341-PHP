@@ -92,22 +92,15 @@
 									$statement->execute(array(':id' => $id));
 									$row = $statement->fetch(PDO::FETCH_ASSOC);
 									If(!$row['isplanned']){
-										echo '<form action="action_addToMealPlanner.php" method="post">';
-										echo '<input type="submit" id="submit-icon" name="'. $row[recipeid] .'" value="Add To Planner">'.
-										'</form>';
+										echo '<a href="action_addToMealPlanner.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Add To Planner</a>'
 									}
 									else{
-										echo '<form action="action_removeFromMealPlanner.php" method="post">';
-										echo '<input type="submit" id="submit-icon" name="'. $row[recipeid] .'" value="Remove From Planner">'.
-										'</form>';
+										echo '<a href="action_removeFromMealPlanner.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Remove From Planner</a>'
+										
 									}
 									
+									echo '<a href="action_deleteRecipe.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="trash.png" style="width:42px;height:42px;"><br>Delete Recipe</a>'
 									?>
-									<form action="action_delete" method="Post">
-										<?php
-											echo '<input type="submit" id="delete_icon" name="'. $row[recipeid] .'" value="Delete Recipe">'
-										?>
-									</form>
     							</div>
 							</li>
 						</ul>
