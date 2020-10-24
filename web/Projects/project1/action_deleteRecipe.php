@@ -26,7 +26,7 @@ try
 	// We do this by preparing the query with placeholder values
 	$query = 'UPDATE recipes SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId ';
 	$statement = $db->prepare($query);
-		$statement->bindValue(':date', $date);
+		$statement->bindValue(':updateDate', $date);
 		$statement->bindValue(':userId',  $userId);
 		$statement->bindValue(':recipeId',  $id);
 
@@ -36,7 +36,7 @@ try
 		$statement = $db->prepare('UPDATE ingredients SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
 			
 		// Then, bind the values
-		$statement->bindValue(':date', $date);
+		$statement->bindValue(':updateDate', $date);
 		$statement->bindValue(':userId',  $userId);
 		$statement->bindValue(':recipeId',  $id);
 
@@ -44,7 +44,7 @@ try
 
 	$statement = $db->prepare('UPDATE intstructions SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
 	// Then, bind the values
-	$statement->bindValue(':date', $date);
+	$statement->bindValue(':updateDate', $date);
 		$statement->bindValue(':userId',  $userId);
 		$statement->bindValue(':recipeId',  $id);
 
