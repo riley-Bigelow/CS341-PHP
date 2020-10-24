@@ -18,11 +18,11 @@
  }
 
  $id = $_GET['id'];
- $planned = 'T'
+ $planned = 'T';
  
-echo $planned.'<br>'
-echo $id
-/*try
+echo $planned.'<br>';
+echo $id;
+try
 {
 	
 
@@ -45,7 +45,7 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: details.php?id='$id'");
 
-die();*/
+die();
 
 ?>
 
