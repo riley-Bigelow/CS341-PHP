@@ -18,39 +18,21 @@
  }
 
  $id = $_GET['id'];
- $date = date('Y-m-d H:i:s');
- $userId = 1;
+ $planned = 'T'
+ 
 
 try
 {
 	
 
 	// We do this by preparing the query with placeholder values
-	$query = 'UPDATE recipes SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId ';
+	$query = 'UPDATE recipes SET isPlanned = :planned  WHERE recipeId = :recipeId ';
 	$statement = $db->prepare($query);
-		$statement->bindValue(':date', $date);
-		$statement->bindValue(':userId',  $userId);
-		$statement->bindValue(':recipeId',  $id);
+		$statement->bindValue(':planned', $planned);
+		$statement->bindValue(':recipeId', $id);
 
 		$statement->execute();
 
-
-		$statement = $db->prepare('UPDATE ingedients SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
-			
-		// Then, bind the values
-		$statement->bindValue(':date', $date);
-		$statement->bindValue(':userId',  $userId);
-		$statement->bindValue(':recipeId',  $id);
-
-		$statement->execute();
-
-	$statement = $db->prepare('UPDATE intstructions SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
-	// Then, bind the values
-	$statement->bindValue(':date', $date);
-		$statement->bindValue(':userId',  $userId);
-		$statement->bindValue(':recipeId',  $id);
-
-	$statement->execute();
 
 }
 catch (Exception $ex)
@@ -65,4 +47,5 @@ header("Location: details.php?id='$id'");
 die();
 
 ?>
+
 

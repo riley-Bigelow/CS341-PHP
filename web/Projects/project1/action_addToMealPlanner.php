@@ -17,79 +17,22 @@
 	 die();
  }
 
-// get the data from the POST
-$recipeName = htmlspecialchars($_POST['recipeName']);
-$servings = htmlspecialchars($_POST['servings']);
-$ingredients = htmlspecialchars($_POST['ingred']);
-$quant = htmlspecialchars($_POST['quant']);
-$measure = htmlspecialchars($_POST['meas']);
-$instructions = htmlspecialchars($_POST['intrsuct']);
-$date = date('Y-m-d H:i:s');
-$planned = "False";
-if(isset($_POST['plan'])){
-	$planned = "True";
-}
-$userId = 1;
-
-/*for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
-	if($_POST['ingred'][$x] !=""){
-		echo 'current insert'.$ingredient = $_POST['ingred'][$x].'<br>';
-		echo $quantity = $_POST['quant'][$x].'<br>';
-		echo $measurement =$_POST['meas'][$x].'<br>';
-	}
-}
-
-var_dump($_POST);*/
+ $id = $_GET['id'];
+ $planned = 'T'
+ 
 
 try
 {
 	
 
 	// We do this by preparing the query with placeholder values
-	$query = 'INSERT INTO recipes (recipeName,servings,createdAt,createdBy,isPlanned)  VALUES(:recipeName,:servings,:createdAt,:createdBy,:isPlanned)';
+	$query = 'UPDATE recipes SET isPlanned = :planned  WHERE recipeId = :recipeId ';
 	$statement = $db->prepare($query);
+		$statement->bindValue(':planned', $planned);
+		$statement->bindValue(':recipeId', $id);
 
-	// Now we bind the values to the placeholders. This does some nice things
-	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':recipeName', $recipeName);
-	$statement->bindValue(':servings', $servings);
-	$statement->bindValue(':createdAt', $date );
-	$statement->bindValue(':createdBy', $userId);
-	$statement->bindValue(':isPlanned',$planned );
+		$statement->execute();
 
-	$statement->execute();
-
-	// get the new id
-	$recipeId = $db->lastInsertId("recipes_recipeid_seq");
-
-	for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
-		if($_POST['ingred'][$x] !=""){
-			$ingredient = $_POST['ingred'][$x];
-			$quantity = $_POST['quant'][$x];
-			$measurement  =$_POST['meas'][$x];
-
-			$statement = $db->prepare('INSERT INTO  ingredients (recipeId,ingredientName,amount,measurement,createdAt,createdBy) VALUES(:recipeId,:ingredientName,:amount,:measurement,:createdAt,:createdBy)');
-			
-			// Then, bind the values
-			$statement->bindValue(':recipeId', $recipeId);
-			$statement->bindValue(':ingredientName',  $ingredient);
-			$statement->bindValue(':amount',  $quantity);
-			$statement->bindValue(':measurement', $measurement);
-			$statement->bindValue(':createdAt',  $date);
-			$statement->bindValue(':createdBy',  $userId);
-
-			$statement->execute();
-		}
-	}
-
-	$statement = $db->prepare('INSERT INTO  instructions (recipeId,instructions,createdAt,createdBy) VALUES(:recipeId,:instructions,:createdAt,:createdBy)');
-	// Then, bind the values
-	$statement->bindValue(':recipeId', $recipeId);
-	$statement->bindValue(':instructions',  $instructions);
-	$statement->bindValue(':createdAt',  $date);
-	$statement->bindValue(':createdBy',  $userId);
-
-	$statement->execute();
 
 }
 catch (Exception $ex)
@@ -99,9 +42,8 @@ catch (Exception $ex)
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("Location: cookBook.php");
+header("Location: details.php?id='$id'");
 
-die(); 
+die();
 
 ?>
-
