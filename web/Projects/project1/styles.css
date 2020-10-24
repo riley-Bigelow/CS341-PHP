@@ -316,7 +316,7 @@ label {
   float: right;
 }
 
-form input[type=reset]:hover {
+#addItem input[type=reset]:hover {
   background-color: rgb(238, 74, 74);
 }
 
