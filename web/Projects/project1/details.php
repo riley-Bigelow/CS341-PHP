@@ -104,7 +104,10 @@
 									}
 									
 									?>
-									<a href="#home" class="button" id="remove" name="${this.recipes[index].id}"><img src="trash.png" style="width:42px;height:42px;"><br>Remove</a>
+									<form action="action_delete" method="Post">
+										<?php
+											'<input type="submit" id="delete-icon" name="'. $row[recipeid] .'" value="Delete Recipe">'
+										?>
     							</div>
 							</li>
 						</ul>
