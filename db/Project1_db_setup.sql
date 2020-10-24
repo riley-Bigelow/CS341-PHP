@@ -46,12 +46,12 @@ deletedBy			int references users(userId)
 INSERT INTO users (userId,username,password,display_name) VALUES (DEFAULT, 'Dev1','1234Abcd','Development');
 
 -- recipes data inserts 
-INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,createdAt,createdBy) 
-VALUES (DEFAULT, 'Mac & Cheese',8,10.00,Now(),1);
-INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,createdAt,createdBy) 
-VALUES (DEFAULT, 'Broccoli Soup',4,7.00,Now(),1);
-INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,createdAt,createdBy) 
-VALUES (DEFAULT, 'Surf & Turf',2,20.00,Now(),1);
+INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,isPlanned,createdAt,createdBy) 
+VALUES (DEFAULT, 'Mac & Cheese',8,10.00,'T',Now(),1);
+INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,isPlanned,createdAt,createdBy) 
+VALUES (DEFAULT, 'Broccoli Soup',4,7.00,'T',Now(),1);
+INSERT INTO recipes (recipeId,recipeName,servings,estimatedCost,isPlanned,createdAt,createdBy) 
+VALUES (DEFAULT, 'Surf & Turf',2,20.00,'F',Now(),1);
 
 
 
@@ -69,7 +69,7 @@ VALUES (DEFAULT,1,'Cheese','2','Cup(s)',Now(),1);
 INSERT INTO ingredients (ingredientsId,recipeId,ingredientName,amount,measurement,createdAt,createdBy) 
 VALUES (DEFAULT,2,'Leek','1','',Now(),1);
 INSERT INTO ingredients (ingredientsId,recipeId,ingredientName,amount,measurement,createdAt,createdBy) 
-VALUES (DEFAULT,2,'Broccli','2/3','Lbs',Now(),1);
+VALUES (DEFAULT,2,'Broccoli','2/3','Lbs',Now(),1);
 INSERT INTO ingredients (ingredientsId,recipeId,ingredientName,amount,measurement,createdAt,createdBy) 
 VALUES (DEFAULT,2,'Water','2','Cup(s)',Now(),1);
 INSERT INTO ingredients (ingredientsId,recipeId,ingredientName,amount,measurement,createdAt,createdBy) 
