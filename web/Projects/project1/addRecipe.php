@@ -195,8 +195,8 @@
 									<textarea id="intrsuct" name="intrsuct" placeholder="Instructions.." style="height:200px" required></textarea>
 									</div>
 								</div>
-									<input type="submit" value="Add Recipe">
-									<input type="reset" value="Clear">
+									<input type="submit" id='#submit-icon'value="Add Recipe">
+									<input type="reset" id ='#delete-icon' value="Clear">
 							</form>
 						</div>			
 				</div>
