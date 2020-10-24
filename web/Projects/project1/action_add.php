@@ -30,7 +30,8 @@ if(isset($_POST['plan'])){
 	$planned = "True";
 }
 $userId = 1;
-for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
+
+/*for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	if($_POST['ingred'][$x] !=""){
 		echo 'current insert'.$ingredient = $_POST['ingred'][$x].'<br>';
 		echo $quantity = $_POST['quant'][$x].'<br>';
@@ -38,7 +39,7 @@ for ($x = 0; $x < count($_POST['ingred']); $x+=1) {
 	}
 }
 
-var_dump($_POST);
+var_dump($_POST);*/
 
 try
 {
