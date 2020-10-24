@@ -92,14 +92,14 @@
 									$statement->execute(array(':id' => $id));
 									$row = $statement->fetch(PDO::FETCH_ASSOC);
 									If(!$row['isplanned']){
-										echo '<a href="action_addToMealPlanner.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Add To Planner</a>';
+										echo '<a href="action_addToMealPlanner.php?id="'.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Add To Planner</a>';
 									}
 									else{
-										echo '<a href="action_removeFromMealPlanner.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Remove From Planner</a>';
+										echo '<a href="action_removeFromMealPlanner.php?id="'.$row[recipeid].'" id ="mealplan"  class="button"><img src="mealplan.png" style="width:42px;height:42px;"><br>Remove From Planner</a>';
 										
 									}
 									
-									echo '<a href="action_deleteRecipe.php?id='.$row[recipeid].'" id ="mealplan"  class="button"><img src="trash.png" style="width:42px;height:42px;"><br>Delete Recipe</a>';
+									echo '<a href="action_deleteRecipe.php?id="'.$row[recipeid].'" id ="mealplan"  class="button"><img src="trash.png" style="width:42px;height:42px;"><br>Delete Recipe</a>';
 									?>
     							</div>
 							</li>
