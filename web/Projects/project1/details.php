@@ -91,7 +91,6 @@
 									$statement = $db->prepare('SELECT recipename, servings, isplanned FROM recipes Where deletedat IS NULL AND recipeid = :id');
 									$statement->execute(array(':id' => $id));
 									$row = $statement->fetch(PDO::FETCH_ASSOC);
-									echo $row['isplanned'];
 									If(!$row['isplanned']){
 										echo '<form action="action_addToMealPlanner.php" method="post">';
 										echo '<input type="submit" id="submit-icon" name="'. $row[recipeid] .'" value="Add To Planner">'.
