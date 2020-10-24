@@ -20,8 +20,13 @@
  $id = $_GET['id'];
  $planned = 'T';
  
+ 
+echo $planned.'<br>';
+echo $id;
 try
 {
+	
+
 	// We do this by preparing the query with placeholder values
 	$query = 'UPDATE recipes SET isPlanned = :planned  WHERE recipeId = :recipeId ';
 	$statement = $db->prepare($query);
@@ -39,8 +44,10 @@ catch (Exception $ex)
 }
 
 // finally, redirect them to a new page to actually show the topics
-header("Location: mealPlanner.php");
+header("Location: cookBook.php");
 
 die();
 
 ?>
+
+
