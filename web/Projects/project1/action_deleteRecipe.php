@@ -42,7 +42,7 @@ try
 
 		$statement->execute();
 
-	$statement = $db->prepare('UPDATE intstructions SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
+	$statement = $db->prepare('UPDATE instructions SET deletedAt = :updateDate, deletedBy = :userId WHERE recipeId = :recipeId');
 	// Then, bind the values
 	$statement->bindValue(':updateDate', $date);
 		$statement->bindValue(':userId',  $userId);
